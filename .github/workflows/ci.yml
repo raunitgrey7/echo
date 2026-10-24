@@ -1,0 +1,69 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+env:
+  UV_VERSION: "0.9.x"
+
+jobs:
+  lint-test:
+    name: lint and test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+      - run: uv python install 3.13
+      - run: uv sync --all-groups
+      - name: ruff
+        run: |
+          uv run ruff check src tests
+          uv run ruff format --check src tests
+      - name: pytest (mock ASR backend, no model download)
+        env:
+          ECHO_ASR_BACKEND: mock
+        run: uv run pytest -q
+
+  benchmark-gate:
+    # macOS runners ship `say` and `afconvert`, which the corpus builder needs.
+    name: benchmark quality gate (macOS, whisper base)
+    runs-on: macos-latest
+    needs: lint-test
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: ${{ env.UV_VERSION }}
+          enable-cache: true
+      - run: uv python install 3.13
+      - run: uv sync --all-groups
+      - name: cache whisper weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface/hub
+          key: faster-whisper-base-${{ runner.os }}
+      - name: cache synthesised utterances
+        uses: actions/cache@v4
+        with:
+          path: data/cache
+          key: echo-say-cache-${{ runner.os }}-${{ hashFiles('src/echo/corpus/scripts.py') }}
+      - name: run the quick profile against the thresholds
+        env:
+          ECHO_ALLOW_DOWNLOAD: "1"
+          ECHO_CPU_THREADS: "3"
+        run: uv run python -m echo.bench --profile quick --backend whisper --model base --check benchmarks/thresholds.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: |
+            benchmarks/results.json
+            benchmarks/results.md

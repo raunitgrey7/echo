@@ -10,7 +10,7 @@ wheels/
 .venv
 
 # Generated audio corpus, cached utterances and API jobs (rebuilt by `make bench`)
-data/
+data/*
 !data/.gitkeep
 .pytest_cache/
 .ruff_cache/

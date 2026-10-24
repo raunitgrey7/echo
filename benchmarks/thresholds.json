@@ -1,0 +1,21 @@
+{
+  "_comment": "Quality gate for `python -m echo.bench --check`. Keys are dotted paths into results.json; one section per ASR backend name. Values were set below the measured results of the first full run (see REPORT.md) with headroom for CI runner variance; they hold for both the quick and the full profile.",
+  "faster-whisper": {
+    "groups.voice_axis.overall.wer": {"max": 0.10},
+    "groups.voice_axis.overall.cer": {"max": 0.05},
+    "groups.voice_axis.overall.vad_f1": {"min": 0.93},
+    "groups.condition_axis.white_10db.wer": {"max": 0.25},
+    "groups.meetings.overall.purity": {"min": 0.85},
+    "groups.meetings.overall.action_f1": {"min": 0.60},
+    "groups.meetings.overall.search_mrr": {"min": 0.60},
+    "groups.overall.pipeline_rtf": {"max": 0.60}
+  },
+  "mock": {
+    "groups.overall.wer": {"max": 0.0},
+    "groups.overall.vad_f1": {"min": 0.93},
+    "groups.meetings.overall.purity": {"min": 0.85},
+    "groups.meetings.overall.action_f1": {"min": 0.60},
+    "groups.meetings.overall.search_mrr": {"min": 0.60},
+    "groups.overall.pipeline_rtf": {"max": 0.10}
+  }
+}
