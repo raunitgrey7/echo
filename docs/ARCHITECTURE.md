@@ -64,6 +64,7 @@ benchmark describes the code path the API serves.
 | `echo.products.search` | BM25 inverted index over sentences | Jump to the moment a question was answered. |
 | `echo.pipeline` | Orders the stages, times them, builds `Analysis`, JSON view | Single shared path. |
 | `echo.bench` | Builds data, runs the pipeline, scores, writes `benchmarks/results.{json,md}`, checks thresholds | Every published number comes from this command. |
+| `echo.calibrate` | Sweeps the speaker distance threshold on a train/test split by script | The one free parameter of the clustering is chosen by a repeatable command, not by hand. |
 | `echo.api.app`, `middleware`, `schemas`, `static/` | FastAPI routes, request ids, JSON logs, Prometheus, API key, dashboard | Operable service with a player synced to the transcript. |
 | `echo.cli` | `transcribe`, `analyze`, `synth`, `voices`, `build-data`, `bench`, `serve` | Everything scriptable without HTTP. |
 

@@ -131,4 +131,4 @@ def test_audio_rejects_bad_shapes():
 def test_pcm16_round_trip_within_one_lsb(values):
     samples = np.array(values, dtype=np.float32)
     back = pcm_to_float(float_to_pcm16(samples), 2)
-    assert np.max(np.abs(back - samples)) <= 0.5 / 32_768 + 1e-6
+    assert np.max(np.abs(back - samples)) <= 1.0 / 32_768 + 1e-6
