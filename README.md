@@ -51,20 +51,20 @@ Linux too; without cached weights the pipeline falls back to a deterministic moc
 
 ## Measured results
 
-All numbers below are copied from `benchmarks/results.json`, written by `make bench` at 2026-10-24T22:04:41+00:00 (commit `0910be1`): faster-whisper `base` int8, 4 CPU threads, macOS-26.5.1-arm64-arm-64bit-Mach-O, Python 3.13.17, 110 recordings, 136.0 minutes of synthetic audio, 382 s wall time. WER and CER are pooled over reference length; VAD scores are frame level against the clean sentence spans; see `docs/EVALUATION.md` for every definition and `REPORT.md` for the command outputs.
+All numbers below are copied from `benchmarks/results.json`, written by `make bench` at 2026-10-24T23:56:49+00:00 (commit `a50fd4d`): faster-whisper `base` int8, 4 CPU threads, macOS-26.5.1-arm64-arm-64bit-Mach-O, Python 3.13.17, 110 recordings, 136.0 minutes of synthetic audio, 455 s wall time. WER and CER are pooled over reference length; VAD scores are frame level against the clean sentence spans; see `docs/EVALUATION.md` for every definition and `REPORT.md` for the command outputs.
 
-Headline: 2.8% WER on clean synthetic lectures across five English voices, 7.4% at 10 dB white noise, 39.4% at 0 dB; speaker purity 0.989 and action-item F1 0.965 on three-speaker meetings; the full pipeline runs at 0.042 times real time (2.5 s per audio minute) on CPU.
+Headline: 2.8% WER on clean synthetic lectures across five English voices, 7.4% at 10 dB white noise, 39.4% at 0 dB; speaker purity 0.989 and action-item F1 0.965 on three-speaker meetings; the full pipeline runs at 0.050 times real time (3.0 s per audio minute) on CPU.
 
 ### Per voice (clean lectures, 175 wpm)
 
 | Voice | Recordings | WER | CER | Sub | Del | Ins | VAD F1 | ASR RTF |
 |---|---|---|---|---|---|---|---|---|
-| overall | 30 | 2.8% | 1.0% | 1.7% | 0.6% | 0.6% | 0.979 | 0.042 |
-| Daniel | 6 | 3.1% | 1.0% | 1.8% | 0.5% | 0.8% | 0.979 | 0.042 |
-| Karen | 6 | 3.5% | 1.3% | 2.0% | 0.8% | 0.8% | 0.979 | 0.042 |
-| Moira | 6 | 2.9% | 1.0% | 1.6% | 0.6% | 0.7% | 0.980 | 0.039 |
-| Rishi | 6 | 3.1% | 0.9% | 1.8% | 0.5% | 0.8% | 0.980 | 0.045 |
-| Samantha | 6 | 1.5% | 0.5% | 1.0% | 0.5% | 0.0% | 0.977 | 0.041 |
+| overall | 30 | 2.8% | 1.0% | 1.7% | 0.6% | 0.6% | 0.979 | 0.047 |
+| Daniel | 6 | 3.1% | 1.0% | 1.8% | 0.5% | 0.8% | 0.979 | 0.049 |
+| Karen | 6 | 3.5% | 1.3% | 2.0% | 0.8% | 0.8% | 0.979 | 0.048 |
+| Moira | 6 | 2.9% | 1.0% | 1.6% | 0.6% | 0.7% | 0.980 | 0.044 |
+| Rishi | 6 | 3.1% | 0.9% | 1.8% | 0.5% | 0.8% | 0.980 | 0.047 |
+| Samantha | 6 | 1.5% | 0.5% | 1.0% | 0.5% | 0.0% | 0.977 | 0.047 |
 
 ### Per acoustic condition (two lectures, three voices)
 
@@ -108,13 +108,12 @@ Headline: 2.8% WER on clean synthetic lectures across five English voices, 7.4% 
 
 | Stage | Seconds per audio minute | RTF |
 |---|---|---|
-| ASR | 2.41 | 0.040 |
-| VAD | 0.011 |  |
-| Speakers | 0.114 |  |
+| ASR | 2.86 | 0.048 |
+| VAD | 0.014 |  |
+| Speakers | 0.140 |  |
 | Products | 0.001 |  |
-| Full pipeline | 2.53 | 0.042 |
-| Model load (once) | 0.19 s |  |
-
+| Full pipeline | 3.01 | 0.050 |
+| Model load (once) | 0.20 s |  |
 
 ## API
 

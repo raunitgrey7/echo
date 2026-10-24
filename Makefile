@@ -21,7 +21,7 @@ format:           ## apply ruff formatting
 	$(UV) run ruff check --fix src tests
 
 test:             ## full test suite
-	$(UV) run pytest -q
+	$(UV) run pytest
 
 data:             ## build the synthetic corpus (needs macOS say)
 	$(UV) run python -m echo.cli build-data --profile $(PROFILE)

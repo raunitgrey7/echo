@@ -1,17 +1,17 @@
 # echo benchmark (full profile)
 
-Backend: `faster-whisper` model `base-int8`, 110 recordings, 136.0 min of audio, 4 CPU threads, macOS-26.5.1-arm64-arm-64bit-Mach-O. Run at 2026-10-24T22:04:41+00:00, commit `0910be1`.
+Backend: `faster-whisper` model `base-int8`, 110 recordings, 136.0 min of audio, 4 CPU threads, macOS-26.5.1-arm64-arm-64bit-Mach-O. Run at 2026-10-24T23:56:49+00:00, commit `a50fd4d`.
 
 ## Per voice (clean lectures)
 
 | Voice | Recordings | WER | CER | Sub | Del | Ins | VAD F1 | ASR RTF |
 |---|---|---|---|---|---|---|---|---|
-| overall | 30 | 2.8% | 1.0% | 1.7% | 0.6% | 0.6% | 0.979 | 0.042 |
-| Daniel | 6 | 3.1% | 1.0% | 1.8% | 0.5% | 0.8% | 0.979 | 0.042 |
-| Karen | 6 | 3.5% | 1.3% | 2.0% | 0.8% | 0.8% | 0.979 | 0.042 |
-| Moira | 6 | 2.9% | 1.0% | 1.6% | 0.6% | 0.7% | 0.980 | 0.039 |
-| Rishi | 6 | 3.1% | 0.9% | 1.8% | 0.5% | 0.8% | 0.980 | 0.045 |
-| Samantha | 6 | 1.5% | 0.5% | 1.0% | 0.5% | 0.0% | 0.977 | 0.041 |
+| overall | 30 | 2.8% | 1.0% | 1.7% | 0.6% | 0.6% | 0.979 | 0.047 |
+| Daniel | 6 | 3.1% | 1.0% | 1.8% | 0.5% | 0.8% | 0.979 | 0.049 |
+| Karen | 6 | 3.5% | 1.3% | 2.0% | 0.8% | 0.8% | 0.979 | 0.048 |
+| Moira | 6 | 2.9% | 1.0% | 1.6% | 0.6% | 0.7% | 0.980 | 0.044 |
+| Rishi | 6 | 3.1% | 0.9% | 1.8% | 0.5% | 0.8% | 0.980 | 0.047 |
+| Samantha | 6 | 1.5% | 0.5% | 1.0% | 0.5% | 0.0% | 0.977 | 0.047 |
 
 ## Per acoustic condition (two lectures, three voices)
 
@@ -55,9 +55,9 @@ Backend: `faster-whisper` model `base-int8`, 110 recordings, 136.0 min of audio,
 
 | Stage | Seconds per audio minute | RTF |
 |---|---|---|
-| ASR | 2.41 | 0.040 |
-| VAD | 0.011 |  |
-| Speakers | 0.114 |  |
+| ASR | 2.86 | 0.048 |
+| VAD | 0.014 |  |
+| Speakers | 0.140 |  |
 | Products | 0.001 |  |
-| Full pipeline | 2.53 | 0.042 |
-| Model load (once) | 0.19 s |  |
+| Full pipeline | 3.01 | 0.050 |
+| Model load (once) | 0.20 s |  |

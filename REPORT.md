@@ -23,9 +23,9 @@ Apple Silicon Mac (15 cores, 24 GB), Python 3.13.17 via uv, no GPU, no network a
 ## 2. Measured numbers
 
 Command: `make bench` (equivalent to `uv run python -m echo.bench --profile full --backend auto --model base --check benchmarks/thresholds.json`).
-Run: 2026-10-24T22:04:41+00:00, commit `0910be1`, faster-whisper `base-int8`, 4 CPU threads,
-macOS-26.5.1-arm64, Python 3.13.17, 110 recordings, 136.0 min of audio, wall time 381.7 s,
-model load 0.19 s. Output file: `benchmarks/results.json`; tables: `benchmarks/results.md`.
+Run: 2026-10-24T23:56:49+00:00, commit `a50fd4d`, faster-whisper `base-int8`, 4 CPU threads,
+macOS-26.5.1-arm64-arm-64bit-Mach-O, Python 3.13.17, 110 recordings, 136.0 min of audio, wall time 454.7 s,
+model load 0.20 s. Output file: `benchmarks/results.json`; tables: `benchmarks/results.md`.
 The quality gate passed.
 
 ### 2.1 WER and CER per voice (clean lectures, 175 wpm, 30 recordings)
@@ -95,12 +95,12 @@ and 6/15, french_revolution 19/50 and 5/15.
 
 | Stage | Seconds per audio minute | RTF |
 |---|---|---|
-| ASR (faster-whisper base int8) | 2.41 | 0.040 |
-| VAD | 0.011 | |
-| Speaker clustering | 0.114 | |
+| ASR (faster-whisper base int8) | 2.86 | 0.048 |
+| VAD | 0.014 | |
+| Speaker clustering | 0.140 | |
 | Keywords, notes, actions | 0.001 | |
-| Full pipeline | 2.53 | 0.042 |
-| Model load (once) | 0.19 s | |
+| Full pipeline | 3.01 | 0.050 |
+| Model load (once) | 0.20 s | |
 
 ### 2.7 Speaker threshold calibration
 
@@ -148,7 +148,54 @@ wrong API key), and one whisper test that runs when the base model is cached and
 
 ## 4. Command outputs (final run from a clean shell)
 
-MAKE_TAILS_PLACEHOLDER
+Shell: `env -i HOME=$HOME PATH=$HOME/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin /bin/zsh -c 'make lint && make test && make bench'`.
+
+`make lint` (tail):
+
+```
+uv run ruff check src tests
+All checks passed!
+uv run ruff format --check src tests
+54 files already formatted
+```
+
+`make test` (tail):
+
+```
+uv run pytest
+........................................................................ [ 57%]
+......................................................                   [100%]
+126 passed in 5.74s
+```
+
+`make bench` (tail, full log in the terminal; tables in `benchmarks/results.md`):
+
+```
+
+## Latency (all recordings)
+
+| Stage | Seconds per audio minute | RTF |
+|---|---|---|
+| ASR | 2.86 | 0.048 |
+| VAD | 0.014 |  |
+| Speakers | 0.140 |  |
+| Products | 0.001 |  |
+| Full pipeline | 3.01 | 0.050 |
+| Model load (once) | 0.20 s |  |
+
+quality gate: passed
+exit 0
+```
+
+
+`make docker` and a container smoke test (`docker run --rm -p 18080:8000 -e ECHO_ASR_BACKEND=mock echo:latest`):
+
+```
+docker image ls echo:latest      -> echo:latest 911MB
+GET /health                      -> {"status":"ok","version":"0.1.0","backend":"mock","model":"mock-oracle-wer0.00","auth_required":false,"jobs":0,"demo_available":true}
+POST /v1/demo                    -> 201 (bundled clip, since the container has no `say`)
+docker exec echo-smoke id        -> uid=999(echo) gid=999(echo) groups=999(echo)
+```
 
 ## 5. Known gaps and limitations
 
@@ -164,8 +211,9 @@ MAKE_TAILS_PLACEHOLDER
 5. WER at 0 dB white noise is 39.4% and up to 57% on single recordings; whisper base is the
    limiting factor and the harness makes that visible rather than hiding it.
 6. Owner extraction depends on names being recognised; 88.2% owner accuracy on the meetings.
-7. The service processes whole files synchronously; a one-hour lecture takes about 2.5 minutes on
-   four CPU threads and the HTTP request waits for it. No streaming, English only.
+7. The service processes whole files synchronously and the HTTP request waits for the result: at the
+   measured 2.53 s per audio minute (four threads) a one-hour lecture would take about 2.5 minutes.
+   No streaming, English only.
 8. CI could not be executed from this machine (no pushes are allowed); the workflow was written to
    mirror the local `make lint`, `make test` and `make bench-quick` commands that were run here.
 9. The Docker image builds the Linux arm64 wheels of ctranslate2 and onnxruntime; it was built

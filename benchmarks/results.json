@@ -1,8 +1,8 @@
 {
  "meta": {
-  "timestamp_utc": "2026-10-24T22:04:41+00:00",
+  "timestamp_utc": "2026-10-24T23:56:49+00:00",
   "echo_version": "0.1.0",
-  "git_commit": "0910be1",
+  "git_commit": "a50fd4d",
   "profile": "full",
   "backend": "faster-whisper",
   "model": "base-int8",
@@ -13,8 +13,8 @@
   "python": "3.13.17",
   "n_recordings": 110,
   "total_audio_s": 8162.3009375,
-  "model_load_s": 0.18600099999457598,
-  "wall_s": 381.6711334169959,
+  "model_load_s": 0.20453874999657273,
+  "wall_s": 454.73943545800284,
   "seeds": "per-recording seed = first 4 bytes of sha256(recording id); mock seed 0"
  },
  "groups": {
@@ -45,13 +45,13 @@
    "search_hit_at_3": 0.9757575757575757,
    "search_mrr": 0.892929292929293,
    "search_queries": 330,
-   "asr_s_per_audio_min": 2.4070215932956627,
-   "vad_s_per_audio_min": 0.01069619749240864,
-   "speakers_s_per_audio_min": 0.11406860969504981,
-   "products_s_per_audio_min": 0.0009683265273288323,
-   "pipeline_s_per_audio_min": 2.532762303218936,
-   "asr_rtf": 0.04011702655492771,
-   "pipeline_rtf": 0.042212705053648936
+   "asr_s_per_audio_min": 2.8556160816087592,
+   "vad_s_per_audio_min": 0.013527197280299521,
+   "speakers_s_per_audio_min": 0.13975900986462156,
+   "products_s_per_audio_min": 0.001155761071654587,
+   "pipeline_s_per_audio_min": 3.010067609820892,
+   "asr_rtf": 0.04759360136014599,
+   "pipeline_rtf": 0.05016779349701486
   },
   "voice_axis": {
    "overall": {
@@ -77,13 +77,13 @@
     "search_hit_at_3": 0.9888888888888889,
     "search_mrr": 0.8962962962962964,
     "search_queries": 90,
-    "asr_s_per_audio_min": 2.4989740431534515,
-    "vad_s_per_audio_min": 0.011311165337804697,
-    "speakers_s_per_audio_min": 0.12191435425009838,
-    "products_s_per_audio_min": 0.0010067302042931865,
-    "pipeline_s_per_audio_min": 2.633215275405534,
-    "asr_rtf": 0.04164956738589086,
-    "pipeline_rtf": 0.043886921256758894
+    "asr_s_per_audio_min": 2.808294036704593,
+    "vad_s_per_audio_min": 0.013614104898328726,
+    "speakers_s_per_audio_min": 0.1394623865879712,
+    "products_s_per_audio_min": 0.001177294875760991,
+    "pipeline_s_per_audio_min": 2.962557007069943,
+    "asr_rtf": 0.04680490061174322,
+    "pipeline_rtf": 0.049375950117832385
    },
    "Daniel": {
     "n_recordings": 6,
@@ -108,13 +108,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9074074074074073,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.503614712979719,
-    "vad_s_per_audio_min": 0.011454360587707968,
-    "speakers_s_per_audio_min": 0.11168398135502369,
-    "products_s_per_audio_min": 0.0009269963269996085,
-    "pipeline_s_per_audio_min": 2.6276875965379,
-    "asr_rtf": 0.04172691188299532,
-    "pipeline_rtf": 0.04379479327563166
+    "asr_s_per_audio_min": 2.9134521445981876,
+    "vad_s_per_audio_min": 0.014426896655014206,
+    "speakers_s_per_audio_min": 0.14070334135858384,
+    "products_s_per_audio_min": 0.0011405608465425497,
+    "pipeline_s_per_audio_min": 3.0697318709003008,
+    "asr_rtf": 0.048557535743303126,
+    "pipeline_rtf": 0.051162197848338344
    },
    "Karen": {
     "n_recordings": 6,
@@ -139,13 +139,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9074074074074073,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.5036682455617147,
-    "vad_s_per_audio_min": 0.01132000829691197,
-    "speakers_s_per_audio_min": 0.10823770560691366,
-    "products_s_per_audio_min": 0.0009751318757593107,
-    "pipeline_s_per_audio_min": 2.624207665274043,
-    "asr_rtf": 0.04172780409269525,
-    "pipeline_rtf": 0.04373679442123405
+    "asr_s_per_audio_min": 2.8752842935449467,
+    "vad_s_per_audio_min": 0.01306580993107131,
+    "speakers_s_per_audio_min": 0.13521113759839315,
+    "products_s_per_audio_min": 0.001210043419587439,
+    "pipeline_s_per_audio_min": 3.0247792793413026,
+    "asr_rtf": 0.047921404892415774,
+    "pipeline_rtf": 0.05041298798902171
    },
    "Moira": {
     "n_recordings": 6,
@@ -170,13 +170,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9074074074074073,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.3624330500612136,
-    "vad_s_per_audio_min": 0.010635885771683682,
-    "speakers_s_per_audio_min": 0.13675427305106458,
-    "products_s_per_audio_min": 0.0010287624113324977,
-    "pipeline_s_per_audio_min": 2.5108580817691117,
-    "asr_rtf": 0.03937388416768689,
-    "pipeline_rtf": 0.04184763469615186
+    "asr_s_per_audio_min": 2.648004905785724,
+    "vad_s_per_audio_min": 0.013367922182790934,
+    "speakers_s_per_audio_min": 0.14068703547310266,
+    "products_s_per_audio_min": 0.0012244785899302784,
+    "pipeline_s_per_audio_min": 2.8032921240345052,
+    "asr_rtf": 0.04413341509642873,
+    "pipeline_rtf": 0.04672153540057508
    },
    "Rishi": {
     "n_recordings": 6,
@@ -201,13 +201,13 @@
     "search_hit_at_3": 0.9444444444444444,
     "search_mrr": 0.8518518518518519,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.672024559009772,
-    "vad_s_per_audio_min": 0.01133904930649966,
-    "speakers_s_per_audio_min": 0.13248033548451185,
-    "products_s_per_audio_min": 0.0009399328574006896,
-    "pipeline_s_per_audio_min": 2.816790312575015,
-    "asr_rtf": 0.04453374265016287,
-    "pipeline_rtf": 0.04694650520958358
+    "asr_s_per_audio_min": 2.804606487601365,
+    "vad_s_per_audio_min": 0.013097314541715012,
+    "speakers_s_per_audio_min": 0.14308770180382865,
+    "products_s_per_audio_min": 0.0010614467301859585,
+    "pipeline_s_per_audio_min": 2.9618603358745066,
+    "asr_rtf": 0.04674344146002275,
+    "pipeline_rtf": 0.04936433893124178
    },
    "Samantha": {
     "n_recordings": 6,
@@ -232,13 +232,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9074074074074073,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.4412803420201854,
-    "vad_s_per_audio_min": 0.011838529077594773,
-    "speakers_s_per_audio_min": 0.11881985029211434,
-    "products_s_per_audio_min": 0.0011724318347239443,
-    "pipeline_s_per_audio_min": 2.5731299408266324,
-    "asr_rtf": 0.04068800570033642,
-    "pipeline_rtf": 0.04288549901377721
+    "asr_s_per_audio_min": 2.8056422301858115,
+    "vad_s_per_audio_min": 0.014161453487662736,
+    "speakers_s_per_audio_min": 0.1371265598711509,
+    "products_s_per_audio_min": 0.0012614579793418532,
+    "pipeline_s_per_audio_min": 2.9582058433615854,
+    "asr_rtf": 0.04676070383643019,
+    "pipeline_rtf": 0.04930343072269309
    }
   },
   "condition_axis": {
@@ -265,13 +265,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.6934727300864925,
-    "vad_s_per_audio_min": 0.011867847246563722,
-    "speakers_s_per_audio_min": 0.1349816903112798,
-    "products_s_per_audio_min": 0.0010652284144050633,
-    "pipeline_s_per_audio_min": 2.8414036984504385,
-    "asr_rtf": 0.04489121216810821,
-    "pipeline_rtf": 0.04735672830750731
+    "asr_s_per_audio_min": 3.0645873273673994,
+    "vad_s_per_audio_min": 0.014420925507453419,
+    "speakers_s_per_audio_min": 0.1439076775387231,
+    "products_s_per_audio_min": 0.0011222519413123116,
+    "pipeline_s_per_audio_min": 3.224051691669049,
+    "asr_rtf": 0.051076455456123326,
+    "pipeline_rtf": 0.053734194861150816
    },
    "white_20db": {
     "n_recordings": 6,
@@ -296,13 +296,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.5299312493917876,
-    "vad_s_per_audio_min": 0.011859831790882475,
-    "speakers_s_per_audio_min": 0.11755524725590129,
-    "products_s_per_audio_min": 0.000947386752865072,
-    "pipeline_s_per_audio_min": 2.6603018918185364,
-    "asr_rtf": 0.04216552082319646,
-    "pipeline_rtf": 0.044338364863642274
+    "asr_s_per_audio_min": 2.8274649015477853,
+    "vad_s_per_audio_min": 0.013566890212710486,
+    "speakers_s_per_audio_min": 0.1429157147119433,
+    "products_s_per_audio_min": 0.0011330282957594136,
+    "pipeline_s_per_audio_min": 2.9850879294407884,
+    "asr_rtf": 0.04712441502579642,
+    "pipeline_rtf": 0.04975146549067981
    },
    "white_10db": {
     "n_recordings": 6,
@@ -327,13 +327,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.3580188738203334,
-    "vad_s_per_audio_min": 0.010717884528298773,
-    "speakers_s_per_audio_min": 0.10345822077970046,
-    "products_s_per_audio_min": 0.0009048631948285002,
-    "pipeline_s_per_audio_min": 2.4731061771302065,
-    "asr_rtf": 0.03930031456367223,
-    "pipeline_rtf": 0.041218436285503444
+    "asr_s_per_audio_min": 2.770673456001008,
+    "vad_s_per_audio_min": 0.013599429630824235,
+    "speakers_s_per_audio_min": 0.1489868965811782,
+    "products_s_per_audio_min": 0.0011732851281899609,
+    "pipeline_s_per_audio_min": 2.934448780475542,
+    "asr_rtf": 0.04617789093335014,
+    "pipeline_rtf": 0.04890747967459237
    },
    "white_5db": {
     "n_recordings": 6,
@@ -358,13 +358,13 @@
     "search_hit_at_3": 0.9444444444444444,
     "search_mrr": 0.8518518518518519,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.4366111460703284,
-    "vad_s_per_audio_min": 0.01049340093720152,
-    "speakers_s_per_audio_min": 0.10954938550632766,
-    "products_s_per_audio_min": 0.0009308873543377826,
-    "pipeline_s_per_audio_min": 2.557594209444979,
-    "asr_rtf": 0.040610185767838806,
-    "pipeline_rtf": 0.04262657015741632
+    "asr_s_per_audio_min": 2.9525464652578672,
+    "vad_s_per_audio_min": 0.013415949547999474,
+    "speakers_s_per_audio_min": 0.14629394594996994,
+    "products_s_per_audio_min": 0.0011611435534558882,
+    "pipeline_s_per_audio_min": 3.113425647261072,
+    "asr_rtf": 0.049209107754297786,
+    "pipeline_rtf": 0.0518904274543512
    },
    "white_0db": {
     "n_recordings": 6,
@@ -389,13 +389,13 @@
     "search_hit_at_3": 0.7777777777777778,
     "search_mrr": 0.712962962962963,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.472464773433636,
-    "vad_s_per_audio_min": 0.010912632326613186,
-    "speakers_s_per_audio_min": 0.11145147340064886,
-    "products_s_per_audio_min": 0.0009407120071519644,
-    "pipeline_s_per_audio_min": 2.595777279671335,
-    "asr_rtf": 0.04120774622389393,
-    "pipeline_rtf": 0.043262954661188915
+    "asr_s_per_audio_min": 2.98476820516304,
+    "vad_s_per_audio_min": 0.014410770617791318,
+    "speakers_s_per_audio_min": 0.14379338630647306,
+    "products_s_per_audio_min": 0.0012658711956269506,
+    "pipeline_s_per_audio_min": 3.144248131017287,
+    "asr_rtf": 0.049746136752717336,
+    "pipeline_rtf": 0.05240413551695478
    },
    "pink_10db": {
     "n_recordings": 6,
@@ -420,13 +420,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.23563702091606,
-    "vad_s_per_audio_min": 0.010043036137118414,
-    "speakers_s_per_audio_min": 0.10260582588207953,
-    "products_s_per_audio_min": 0.0008968086784505826,
-    "pipeline_s_per_audio_min": 2.349188760731749,
-    "asr_rtf": 0.03726061701526767,
-    "pipeline_rtf": 0.039153146012195814
+    "asr_s_per_audio_min": 2.784767681421247,
+    "vad_s_per_audio_min": 0.013653775082812122,
+    "speakers_s_per_audio_min": 0.1432721676237191,
+    "products_s_per_audio_min": 0.0011118498527749056,
+    "pipeline_s_per_audio_min": 2.9428129667213105,
+    "asr_rtf": 0.046412794690354114,
+    "pipeline_rtf": 0.04904688277868851
    },
    "pink_5db": {
     "n_recordings": 6,
@@ -451,13 +451,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.2239164047405526,
-    "vad_s_per_audio_min": 0.010603471764050071,
-    "speakers_s_per_audio_min": 0.12396619285964662,
-    "products_s_per_audio_min": 0.0009534173332483847,
-    "pipeline_s_per_audio_min": 2.3594456867311013,
-    "asr_rtf": 0.037065273412342545,
-    "pipeline_rtf": 0.03932409477885169
+    "asr_s_per_audio_min": 2.7428747145153594,
+    "vad_s_per_audio_min": 0.01388863697625784,
+    "speakers_s_per_audio_min": 0.14320384577849807,
+    "products_s_per_audio_min": 0.0011418342809194355,
+    "pipeline_s_per_audio_min": 2.901116978375365,
+    "asr_rtf": 0.04571457857525599,
+    "pipeline_rtf": 0.04835194963958942
    },
    "babble_10db": {
     "n_recordings": 6,
@@ -482,13 +482,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.366232194139594,
-    "vad_s_per_audio_min": 0.010525329041168121,
-    "speakers_s_per_audio_min": 0.10765918931915429,
-    "products_s_per_audio_min": 0.0008789254742325327,
-    "pipeline_s_per_audio_min": 2.485302155491121,
-    "asr_rtf": 0.0394372032356599,
-    "pipeline_rtf": 0.041421702591518686
+    "asr_s_per_audio_min": 3.018963361379288,
+    "vad_s_per_audio_min": 0.01717036312709175,
+    "speakers_s_per_audio_min": 0.14196182182456601,
+    "products_s_per_audio_min": 0.0012012736844810796,
+    "pipeline_s_per_audio_min": 3.1793152463811483,
+    "asr_rtf": 0.05031605602298814,
+    "pipeline_rtf": 0.052988587439685805
    },
    "babble_5db": {
     "n_recordings": 6,
@@ -513,13 +513,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9351851851851851,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.31088055003952,
-    "vad_s_per_audio_min": 0.010146112479644823,
-    "speakers_s_per_audio_min": 0.1060810183117539,
-    "products_s_per_audio_min": 0.0008865518705717624,
-    "pipeline_s_per_audio_min": 2.4280001777914197,
-    "asr_rtf": 0.038514675833992006,
-    "pipeline_rtf": 0.04046666962985699
+    "asr_s_per_audio_min": 2.9287343536997756,
+    "vad_s_per_audio_min": 0.013117190779757664,
+    "speakers_s_per_audio_min": 0.13713442335860343,
+    "products_s_per_audio_min": 0.0010768039288489109,
+    "pipeline_s_per_audio_min": 3.0800720265082733,
+    "asr_rtf": 0.04881223922832959,
+    "pipeline_rtf": 0.051334533775137886
    },
    "reverb_rt60_0.4s": {
     "n_recordings": 6,
@@ -544,13 +544,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.3528139656193803,
-    "vad_s_per_audio_min": 0.010270940733472659,
-    "speakers_s_per_audio_min": 0.11216578401499219,
-    "products_s_per_audio_min": 0.0008949156481888163,
-    "pipeline_s_per_audio_min": 2.4761525851557162,
-    "asr_rtf": 0.03921356609365634,
-    "pipeline_rtf": 0.04126920975259527
+    "asr_s_per_audio_min": 2.834641505399462,
+    "vad_s_per_audio_min": 0.012737863659452793,
+    "speakers_s_per_audio_min": 0.13517031986972225,
+    "products_s_per_audio_min": 0.0010717603256597506,
+    "pipeline_s_per_audio_min": 2.9836300847266104,
+    "asr_rtf": 0.04724402508999103,
+    "pipeline_rtf": 0.04972716807877684
    },
    "reverb_rt60_0.8s": {
     "n_recordings": 6,
@@ -575,13 +575,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9444444444444444,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.469987346269721,
-    "vad_s_per_audio_min": 0.010462446174133562,
-    "speakers_s_per_audio_min": 0.10741509249977896,
-    "products_s_per_audio_min": 0.0009005170913111006,
-    "pipeline_s_per_audio_min": 2.588771643527631,
-    "asr_rtf": 0.041166455771162014,
-    "pipeline_rtf": 0.04314619405879385
+    "asr_s_per_audio_min": 2.9063491685357157,
+    "vad_s_per_audio_min": 0.013513476713705756,
+    "speakers_s_per_audio_min": 0.13428598243246553,
+    "products_s_per_audio_min": 0.0010774591672548768,
+    "pipeline_s_per_audio_min": 3.0552341383747077,
+    "asr_rtf": 0.0484391528089286,
+    "pipeline_rtf": 0.05092056897291179
    }
   },
   "rate_axis": {
@@ -608,13 +608,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.6934727300864925,
-    "vad_s_per_audio_min": 0.011867847246563722,
-    "speakers_s_per_audio_min": 0.1349816903112798,
-    "products_s_per_audio_min": 0.0010652284144050633,
-    "pipeline_s_per_audio_min": 2.8414036984504385,
-    "asr_rtf": 0.04489121216810821,
-    "pipeline_rtf": 0.04735672830750731
+    "asr_s_per_audio_min": 3.0645873273673994,
+    "vad_s_per_audio_min": 0.014420925507453419,
+    "speakers_s_per_audio_min": 0.1439076775387231,
+    "products_s_per_audio_min": 0.0011222519413123116,
+    "pipeline_s_per_audio_min": 3.224051691669049,
+    "asr_rtf": 0.051076455456123326,
+    "pipeline_rtf": 0.053734194861150816
    },
    "140": {
     "n_recordings": 6,
@@ -639,13 +639,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.3414546289261176,
-    "vad_s_per_audio_min": 0.01010280464846378,
-    "speakers_s_per_audio_min": 0.1261705381921582,
-    "products_s_per_audio_min": 0.0012134015317041248,
-    "pipeline_s_per_audio_min": 2.4789487863118818,
-    "asr_rtf": 0.039024243815435296,
-    "pipeline_rtf": 0.04131581310519803
+    "asr_s_per_audio_min": 2.6412938039194187,
+    "vad_s_per_audio_min": 0.012042804184762819,
+    "speakers_s_per_audio_min": 0.13428745078111515,
+    "products_s_per_audio_min": 0.000989955634258577,
+    "pipeline_s_per_audio_min": 2.788621692184157,
+    "asr_rtf": 0.044021563398656975,
+    "pipeline_rtf": 0.046477028203069294
    },
    "220": {
     "n_recordings": 6,
@@ -670,13 +670,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 18,
-    "asr_s_per_audio_min": 2.7685081891341987,
-    "vad_s_per_audio_min": 0.010877579263029742,
-    "speakers_s_per_audio_min": 0.11475871661752621,
-    "products_s_per_audio_min": 0.0010959514683338961,
-    "pipeline_s_per_audio_min": 2.8952493442295943,
-    "asr_rtf": 0.04614180315223664,
-    "pipeline_rtf": 0.0482541557371599
+    "asr_s_per_audio_min": 3.218092668240081,
+    "vad_s_per_audio_min": 0.012470540621659133,
+    "speakers_s_per_audio_min": 0.1377305238255294,
+    "products_s_per_audio_min": 0.0014012490511259895,
+    "pipeline_s_per_audio_min": 3.369704286005031,
+    "asr_rtf": 0.05363487780400135,
+    "pipeline_rtf": 0.05616173810008385
    }
   },
   "meetings": {
@@ -705,13 +705,13 @@
     "search_hit_at_3": 0.9166666666666666,
     "search_mrr": 0.8333333333333334,
     "search_queries": 24,
-    "asr_s_per_audio_min": 2.1005475329633416,
-    "vad_s_per_audio_min": 0.009409763339824415,
-    "speakers_s_per_audio_min": 0.10371588313915214,
-    "products_s_per_audio_min": 0.0009628227425353597,
-    "pipeline_s_per_audio_min": 2.2146424043977118,
-    "asr_rtf": 0.03500912554938903,
-    "pipeline_rtf": 0.036910706739961864
+    "asr_s_per_audio_min": 2.8184398837570854,
+    "vad_s_per_audio_min": 0.012048577596309179,
+    "speakers_s_per_audio_min": 0.13064250801819585,
+    "products_s_per_audio_min": 0.0011710982136359793,
+    "pipeline_s_per_audio_min": 2.9623105040375517,
+    "asr_rtf": 0.04697399806261809,
+    "pipeline_rtf": 0.0493718417339592
    },
    "clean": {
     "n_recordings": 4,
@@ -738,13 +738,13 @@
     "search_hit_at_3": 1.0,
     "search_mrr": 0.9166666666666666,
     "search_queries": 12,
-    "asr_s_per_audio_min": 2.1154656004674908,
-    "vad_s_per_audio_min": 0.009176940856201098,
-    "speakers_s_per_audio_min": 0.1045049422717182,
-    "products_s_per_audio_min": 0.0009466706027688393,
-    "pipeline_s_per_audio_min": 2.230100554741999,
-    "asr_rtf": 0.03525776000779151,
-    "pipeline_rtf": 0.037168342579033314
+    "asr_s_per_audio_min": 2.875791185561486,
+    "vad_s_per_audio_min": 0.012153032110065567,
+    "speakers_s_per_audio_min": 0.13325346435299557,
+    "products_s_per_audio_min": 0.0011682912470763122,
+    "pipeline_s_per_audio_min": 3.0223743584494973,
+    "asr_rtf": 0.047929853092691425,
+    "pipeline_rtf": 0.050372905974158284
    },
    "white_10db": {
     "n_recordings": 4,
@@ -771,13 +771,13 @@
     "search_hit_at_3": 0.8333333333333334,
     "search_mrr": 0.75,
     "search_queries": 12,
-    "asr_s_per_audio_min": 2.0855313093489944,
-    "vad_s_per_audio_min": 0.0096441177208837,
-    "speakers_s_per_audio_min": 0.10292163225000317,
-    "products_s_per_audio_min": 0.0009790811582126456,
-    "pipeline_s_per_audio_min": 2.1990825443709716,
-    "asr_rtf": 0.03475885515581658,
-    "pipeline_rtf": 0.0366513757395162
+    "asr_s_per_audio_min": 2.7607112287399875,
+    "vad_s_per_audio_min": 0.011943435805279103,
+    "speakers_s_per_audio_min": 0.12801437242625377,
+    "products_s_per_audio_min": 0.001173923649137343,
+    "pipeline_s_per_audio_min": 2.901851448684804,
+    "asr_rtf": 0.04601185381233312,
+    "pipeline_rtf": 0.0483641908114134
    }
   },
   "lectures_clean": {
@@ -803,13 +803,13 @@
    "search_hit_at_3": 0.9920634920634921,
    "search_mrr": 0.9021164021164022,
    "search_queries": 126,
-   "asr_s_per_audio_min": 2.5071064721191463,
-   "vad_s_per_audio_min": 0.011057547175916347,
-   "speakers_s_per_audio_min": 0.1217106847384157,
-   "products_s_per_audio_min": 0.0010520107105700977,
-   "pipeline_s_per_audio_min": 2.6409354295077194,
-   "asr_rtf": 0.04178510786865244,
-   "pipeline_rtf": 0.04401559049179532
+   "asr_s_per_audio_min": 2.8325872616689374,
+   "vad_s_per_audio_min": 0.013211065871942432,
+   "speakers_s_per_audio_min": 0.13839203377803427,
+   "products_s_per_audio_min": 0.0011747618315554144,
+   "pipeline_s_per_audio_min": 2.985374074475299,
+   "asr_rtf": 0.04720978769448229,
+   "pipeline_rtf": 0.04975623457458832
   }
  },
  "recordings": [
@@ -852,11 +852,11 @@
     1,
     1
    ],
-   "asr_s": 2.917553124992992,
-   "vad_s": 0.01704795799741987,
-   "speakers_s": 0.21471141699294094,
-   "products_s": 0.0014532500063069165,
-   "total_s": 3.150791207983275
+   "asr_s": 3.543060374999186,
+   "vad_s": 0.022616624992224388,
+   "speakers_s": 0.17307962500490248,
+   "products_s": 0.0014457090001087636,
+   "total_s": 3.740250251008547
   },
   {
    "id": "lec_photosynthesis_daniel",
@@ -897,11 +897,11 @@
     1,
     1
    ],
-   "asr_s": 3.012818667004467,
-   "vad_s": 0.01623325000400655,
-   "speakers_s": 0.19008170800225344,
-   "products_s": 0.0010974159959005192,
-   "total_s": 3.2202464989968576
+   "asr_s": 3.6127752920001512,
+   "vad_s": 0.016096459003165364,
+   "speakers_s": 0.18859491600596812,
+   "products_s": 0.0014210830122465268,
+   "total_s": 3.8189027920161607
   },
   {
    "id": "lec_photosynthesis_karen",
@@ -942,11 +942,11 @@
     1,
     1
    ],
-   "asr_s": 2.969516917000874,
-   "vad_s": 0.014623208000557497,
-   "speakers_s": 0.10154775000410154,
-   "products_s": 0.0010744589962996542,
-   "total_s": 3.0867695409979206
+   "asr_s": 3.796868249992258,
+   "vad_s": 0.016880166993360035,
+   "speakers_s": 0.1532213330065133,
+   "products_s": 0.0012602500064531341,
+   "total_s": 3.9682395000127144
   },
   {
    "id": "lec_photosynthesis_moira",
@@ -987,11 +987,11 @@
     1,
     1
    ],
-   "asr_s": 3.2236719590000575,
-   "vad_s": 0.013056541996775195,
-   "speakers_s": 0.2164958749926882,
-   "products_s": 0.001453833989216946,
-   "total_s": 3.4546857929817634
+   "asr_s": 3.7393687500007218,
+   "vad_s": 0.018568542000139132,
+   "speakers_s": 0.1873367079970194,
+   "products_s": 0.0014319999900180846,
+   "total_s": 3.9467149159754626
   },
   {
    "id": "lec_photosynthesis_rishi",
@@ -1032,11 +1032,11 @@
     1,
     1
    ],
-   "asr_s": 5.095166916013113,
-   "vad_s": 0.01516779100347776,
-   "speakers_s": 0.24218666700471658,
-   "products_s": 0.001516042000730522,
-   "total_s": 5.35404525102058
+   "asr_s": 4.22313795798982,
+   "vad_s": 0.016064542011008598,
+   "speakers_s": 0.2003523339953972,
+   "products_s": 0.001205375010613352,
+   "total_s": 4.440769667024142
   },
   {
    "id": "lec_newton_samantha",
@@ -1077,11 +1077,11 @@
     1,
     1
    ],
-   "asr_s": 3.052824583995971,
-   "vad_s": 0.015292166004655883,
-   "speakers_s": 0.14417791699816007,
-   "products_s": 0.0018517919961595908,
-   "total_s": 3.2142072499991627
+   "asr_s": 3.69629691701266,
+   "vad_s": 0.01435262500308454,
+   "speakers_s": 0.17006074999517296,
+   "products_s": 0.0017097919917432591,
+   "total_s": 3.8824310839845566
   },
   {
    "id": "lec_newton_daniel",
@@ -1122,11 +1122,11 @@
     1,
     1
    ],
-   "asr_s": 3.3436192499939352,
-   "vad_s": 0.012967040995135903,
-   "speakers_s": 0.09900324999762233,
-   "products_s": 0.0011425830016378313,
-   "total_s": 3.4567389150033705
+   "asr_s": 4.769586541995523,
+   "vad_s": 0.02399920899188146,
+   "speakers_s": 0.18414979099179618,
+   "products_s": 0.0014273329870775342,
+   "total_s": 4.979173540981719
   },
   {
    "id": "lec_newton_karen",
@@ -1167,11 +1167,11 @@
     1,
     1
    ],
-   "asr_s": 3.3344677909917664,
-   "vad_s": 0.011867458990309387,
-   "speakers_s": 0.12855700000363868,
-   "products_s": 0.0011330010165693238,
-   "total_s": 3.4760320850036805
+   "asr_s": 4.049851041010697,
+   "vad_s": 0.016462667001178488,
+   "speakers_s": 0.16487587500887457,
+   "products_s": 0.0015117499860934913,
+   "total_s": 4.232711541990284
   },
   {
    "id": "lec_newton_moira",
@@ -1212,11 +1212,11 @@
     1,
     1
    ],
-   "asr_s": 2.8485433330060914,
-   "vad_s": 0.013713958003791049,
-   "speakers_s": 0.14011737500550225,
-   "products_s": 0.0011347920226398855,
-   "total_s": 3.003516875032801
+   "asr_s": 3.2136453749990324,
+   "vad_s": 0.017225999996298924,
+   "speakers_s": 0.16988308299914934,
+   "products_s": 0.0015032499941298738,
+   "total_s": 3.4022683739895
   },
   {
    "id": "lec_newton_rishi",
@@ -1257,11 +1257,11 @@
     1,
     1
    ],
-   "asr_s": 3.24703979199694,
-   "vad_s": 0.014362624991917983,
-   "speakers_s": 0.1456540840008529,
-   "products_s": 0.001113207996240817,
-   "total_s": 3.408177709003212
+   "asr_s": 3.672003957995912,
+   "vad_s": 0.0175330420024693,
+   "speakers_s": 0.18807337500038557,
+   "products_s": 0.0014025829877937213,
+   "total_s": 3.8790225419943454
   },
   {
    "id": "lec_binary_search_samantha",
@@ -1302,11 +1302,11 @@
     1,
     3
    ],
-   "asr_s": 2.8482117079984164,
-   "vad_s": 0.01139050000347197,
-   "speakers_s": 0.11336220901284833,
-   "products_s": 0.0011787919938797131,
-   "total_s": 2.9741505850251997
+   "asr_s": 3.2932619170023827,
+   "vad_s": 0.014291125000454485,
+   "speakers_s": 0.14899104100186378,
+   "products_s": 0.0014442090032389387,
+   "total_s": 3.45799791700847
   },
   {
    "id": "lec_binary_search_daniel",
@@ -1347,11 +1347,11 @@
     1,
     3
    ],
-   "asr_s": 2.9985119170014514,
-   "vad_s": 0.011432292012614198,
-   "speakers_s": 0.12982529199507553,
-   "products_s": 0.001079334004316479,
-   "total_s": 3.1408558760158485
+   "asr_s": 3.184666750006727,
+   "vad_s": 0.015678541996749118,
+   "speakers_s": 0.16021954199823085,
+   "products_s": 0.0012790830223821104,
+   "total_s": 3.3618530000239844
   },
   {
    "id": "lec_binary_search_karen",
@@ -1392,11 +1392,11 @@
     1,
     3
    ],
-   "asr_s": 2.8654684579960303,
-   "vad_s": 0.014280708011938259,
-   "speakers_s": 0.14119970799947623,
-   "products_s": 0.0013555009936681017,
-   "total_s": 3.0223114990076283
+   "asr_s": 3.106206333002774,
+   "vad_s": 0.015597250006976537,
+   "speakers_s": 0.15293420800298918,
+   "products_s": 0.001532333975774236,
+   "total_s": 3.2762790419947123
   },
   {
    "id": "lec_binary_search_moira",
@@ -1437,11 +1437,11 @@
     1,
     3
    ],
-   "asr_s": 2.885038791995612,
-   "vad_s": 0.012970208001206629,
-   "speakers_s": 0.20727933300076984,
-   "products_s": 0.0013239170075394213,
-   "total_s": 3.1066193740116432
+   "asr_s": 3.243815291993087,
+   "vad_s": 0.015928917011478916,
+   "speakers_s": 0.16288854100275785,
+   "products_s": 0.0015086679923115298,
+   "total_s": 3.424150626990013
   },
   {
    "id": "lec_binary_search_rishi",
@@ -1482,11 +1482,11 @@
     1,
     3
    ],
-   "asr_s": 3.092120667002746,
-   "vad_s": 0.013564666995080188,
-   "speakers_s": 0.15358425000158604,
-   "products_s": 0.0011712919949786738,
-   "total_s": 3.2604488340002717
+   "asr_s": 3.524547166991397,
+   "vad_s": 0.016550540996831842,
+   "speakers_s": 0.1696033750049537,
+   "products_s": 0.001317123998887837,
+   "total_s": 3.712027706002118
   },
   {
    "id": "lec_supply_demand_samantha",
@@ -1527,11 +1527,11 @@
     2,
     1
    ],
-   "asr_s": 2.5014757079916308,
-   "vad_s": 0.013386332997470163,
-   "speakers_s": 0.09710600000107661,
-   "products_s": 0.0010275840031681582,
-   "total_s": 2.6130056669935584
+   "asr_s": 2.8042190419946564,
+   "vad_s": 0.014464416992268525,
+   "speakers_s": 0.146984250008245,
+   "products_s": 0.0012087080103810877,
+   "total_s": 2.966885791014647
   },
   {
    "id": "lec_supply_demand_daniel",
@@ -1572,11 +1572,11 @@
     2,
     1
    ],
-   "asr_s": 2.593814875013777,
-   "vad_s": 0.013922958009061404,
-   "speakers_s": 0.11363283298851456,
-   "products_s": 0.001013332002912648,
-   "total_s": 2.7223912890040083
+   "asr_s": 2.909489666999434,
+   "vad_s": 0.014388291994691826,
+   "speakers_s": 0.15527970899711363,
+   "products_s": 0.0013049590052105486,
+   "total_s": 3.0804723770124838
   },
   {
    "id": "lec_supply_demand_karen",
@@ -1617,11 +1617,11 @@
     2,
     1
    ],
-   "asr_s": 2.6414190840005176,
-   "vad_s": 0.013593667012173682,
-   "speakers_s": 0.12086287498823367,
-   "products_s": 0.0009825410088524222,
-   "total_s": 2.776865332998568
+   "asr_s": 3.0049973749992205,
+   "vad_s": 0.01397562499914784,
+   "speakers_s": 0.14914358299574815,
+   "products_s": 0.001343458003248088,
+   "total_s": 3.1694694990146672
   },
   {
    "id": "lec_supply_demand_moira",
@@ -1662,11 +1662,11 @@
     2,
     1
    ],
-   "asr_s": 2.5962472499959404,
-   "vad_s": 0.011637749994406477,
-   "speakers_s": 0.14803895899967756,
-   "products_s": 0.0011139989946968853,
-   "total_s": 2.7570450409839395
+   "asr_s": 3.0507618749979883,
+   "vad_s": 0.01533883401134517,
+   "speakers_s": 0.1609266250015935,
+   "products_s": 0.0014092079945839942,
+   "total_s": 3.2284456669876818
   },
   {
    "id": "lec_supply_demand_rishi",
@@ -1707,11 +1707,11 @@
     2,
     1
    ],
-   "asr_s": 2.67132741700334,
-   "vad_s": 0.014183209001203068,
-   "speakers_s": 0.15978674999496434,
-   "products_s": 0.0010236659873044118,
-   "total_s": 2.8463309169892455
+   "asr_s": 3.2814109579921933,
+   "vad_s": 0.015807042000233196,
+   "speakers_s": 0.17573137499857694,
+   "products_s": 0.0013286659959703684,
+   "total_s": 3.474287123986869
   },
   {
    "id": "lec_water_cycle_samantha",
@@ -1752,11 +1752,11 @@
     1,
     1
    ],
-   "asr_s": 2.6670816249970812,
-   "vad_s": 0.011599082994507626,
-   "speakers_s": 0.10883100000501145,
-   "products_s": 0.0012584999931277707,
-   "total_s": 2.78877858298074
+   "asr_s": 2.911933583993232,
+   "vad_s": 0.015618125005858019,
+   "speakers_s": 0.15580920800857712,
+   "products_s": 0.001409250995493494,
+   "total_s": 3.084779876022367
   },
   {
    "id": "lec_water_cycle_daniel",
@@ -1797,11 +1797,11 @@
     1,
     1
    ],
-   "asr_s": 2.7353412079974078,
-   "vad_s": 0.013056209005299024,
-   "speakers_s": 0.13001262499892619,
-   "products_s": 0.001124791000620462,
-   "total_s": 2.8795429159945343
+   "asr_s": 3.0759599590091966,
+   "vad_s": 0.01532125000085216,
+   "speakers_s": 0.15784991699911188,
+   "products_s": 0.0013890409900341183,
+   "total_s": 3.250529540993739
   },
   {
    "id": "lec_water_cycle_karen",
@@ -1842,11 +1842,11 @@
     1,
     1
    ],
-   "asr_s": 2.745176041004015,
-   "vad_s": 0.011910417000763118,
-   "speakers_s": 0.11985158298921306,
-   "products_s": 0.0011850839946419,
-   "total_s": 2.8781314179796027
+   "asr_s": 2.9187522909924155,
+   "vad_s": 0.012576833003549837,
+   "speakers_s": 0.16185212500568014,
+   "products_s": 0.0014538749965140596,
+   "total_s": 3.0946432500204537
   },
   {
    "id": "lec_water_cycle_moira",
@@ -1887,11 +1887,11 @@
     1,
     1
    ],
-   "asr_s": 2.807856041996274,
-   "vad_s": 0.012549374994705431,
-   "speakers_s": 0.14137095799378585,
-   "products_s": 0.0012233760062372312,
-   "total_s": 2.963007332989946
+   "asr_s": 3.039298042000155,
+   "vad_s": 0.01469712499238085,
+   "speakers_s": 0.1782929159962805,
+   "products_s": 0.0015930829977151006,
+   "total_s": 3.2338906649820274
   },
   {
    "id": "lec_water_cycle_rishi",
@@ -1932,11 +1932,11 @@
     1,
     1
    ],
-   "asr_s": 3.149173249999876,
-   "vad_s": 0.014875291002681479,
-   "speakers_s": 0.15521187501144595,
-   "products_s": 0.0011777080071624368,
-   "total_s": 3.3204459580156254
+   "asr_s": 3.4803467909950996,
+   "vad_s": 0.017056165990652516,
+   "speakers_s": 0.1843277090083575,
+   "products_s": 0.0013911669957451522,
+   "total_s": 3.683131499987212
   },
   {
    "id": "lec_french_revolution_samantha",
@@ -1977,11 +1977,11 @@
     1,
     1
    ],
-   "asr_s": 2.829432333004661,
-   "vad_s": 0.012832791995606385,
-   "speakers_s": 0.14029320800909773,
-   "products_s": 0.0013062919897492975,
-   "total_s": 2.983882000000449
+   "asr_s": 3.0776871670095716,
+   "vad_s": 0.01620720799837727,
+   "speakers_s": 0.14966129200183786,
+   "products_s": 0.0014717909944010898,
+   "total_s": 3.245037248983863
   },
   {
    "id": "lec_french_revolution_daniel",
@@ -2022,11 +2022,11 @@
     1,
     1
    ],
-   "asr_s": 3.2051887499983422,
-   "vad_s": 0.014234083006158471,
-   "speakers_s": 0.13546950000454672,
-   "products_s": 0.0011662909964798018,
-   "total_s": 3.3560678740177536
+   "asr_s": 3.265263291003066,
+   "vad_s": 0.017602000007173046,
+   "speakers_s": 0.15928587499365676,
+   "products_s": 0.0013282490108394995,
+   "total_s": 3.443489290017169
   },
   {
    "id": "lec_french_revolution_karen",
@@ -2067,11 +2067,11 @@
     1,
     1
    ],
-   "asr_s": 2.8509764170012204,
-   "vad_s": 0.012428125002770685,
-   "speakers_s": 0.1405154579988448,
-   "products_s": 0.0010491239954717457,
-   "total_s": 3.004978205994121
+   "asr_s": 3.1140502500056755,
+   "vad_s": 0.015348917004303075,
+   "speakers_s": 0.15804295800626278,
+   "products_s": 0.0013112909946357831,
+   "total_s": 3.2887627910095034
   },
   {
    "id": "lec_french_revolution_moira",
@@ -2112,11 +2112,11 @@
     1,
     1
    ],
-   "asr_s": 2.891186041000765,
-   "vad_s": 0.013744666997808963,
-   "speakers_s": 0.14539629200589843,
-   "products_s": 0.001263000987819396,
-   "total_s": 3.051597835990833
+   "asr_s": 3.051148458995158,
+   "vad_s": 0.01586479099933058,
+   "speakers_s": 0.16809137498785276,
+   "products_s": 0.001496000011684373,
+   "total_s": 3.236610040999949
   },
   {
    "id": "lec_french_revolution_rishi",
@@ -2157,11 +2157,11 @@
     1,
     1
    ],
-   "asr_s": 3.262240167008713,
-   "vad_s": 0.0149130000063451,
-   "speakers_s": 0.1608230419951724,
-   "products_s": 0.0012153330026194453,
-   "total_s": 3.4391994580073515
+   "asr_s": 3.3536481249902863,
+   "vad_s": 0.01755604198842775,
+   "speakers_s": 0.18060687500110362,
+   "products_s": 0.0015053749812068418,
+   "total_s": 3.553325832966948
   },
   {
    "id": "lec_photosynthesis_samantha_white_20db",
@@ -2202,11 +2202,11 @@
     1,
     1
    ],
-   "asr_s": 4.098861082995427,
-   "vad_s": 0.015808166994247586,
-   "speakers_s": 0.2112612079945393,
-   "products_s": 0.0016128750139614567,
-   "total_s": 4.327560626014019
+   "asr_s": 3.35755220799183,
+   "vad_s": 0.01712470799975563,
+   "speakers_s": 0.17487508300109766,
+   "products_s": 0.0012793330097338185,
+   "total_s": 3.550840623007389
   },
   {
    "id": "lec_photosynthesis_samantha_white_10db",
@@ -2247,11 +2247,11 @@
     1,
     1
    ],
-   "asr_s": 3.6940789590007626,
-   "vad_s": 0.01970645898836665,
-   "speakers_s": 0.1373096669994993,
-   "products_s": 0.0010893750004470348,
-   "total_s": 3.8521945839893306
+   "asr_s": 3.2709192500042263,
+   "vad_s": 0.01710787499905564,
+   "speakers_s": 0.17829991699545644,
+   "products_s": 0.0014752499846508726,
+   "total_s": 3.4678126249928027
   },
   {
    "id": "lec_photosynthesis_samantha_white_5db",
@@ -2292,11 +2292,11 @@
     1,
     1
    ],
-   "asr_s": 3.056895458998042,
-   "vad_s": 0.014090249998844229,
-   "speakers_s": 0.14343516700319014,
-   "products_s": 0.001114917016820982,
-   "total_s": 3.215554043024895
+   "asr_s": 3.363587750005536,
+   "vad_s": 0.017052708004484884,
+   "speakers_s": 0.15971183399960864,
+   "products_s": 0.0012735410127788782,
+   "total_s": 3.541635582005256
   },
   {
    "id": "lec_photosynthesis_samantha_white_0db",
@@ -2337,11 +2337,11 @@
     0,
     1
    ],
-   "asr_s": 2.969119874993339,
-   "vad_s": 0.01244399999268353,
-   "speakers_s": 0.12971304199891165,
-   "products_s": 0.001189750008052215,
-   "total_s": 3.1124743339896668
+   "asr_s": 3.6751612500083866,
+   "vad_s": 0.02060512499883771,
+   "speakers_s": 0.1728362499998184,
+   "products_s": 0.0015217079926514998,
+   "total_s": 3.870134082986624
   },
   {
    "id": "lec_photosynthesis_samantha_pink_10db",
@@ -2382,11 +2382,11 @@
     1,
     1
    ],
-   "asr_s": 2.439105125013157,
-   "vad_s": 0.012651541997911409,
-   "speakers_s": 0.1410582499956945,
-   "products_s": 0.0010895419982261956,
-   "total_s": 2.5939127079909667
+   "asr_s": 3.2050368749914924,
+   "vad_s": 0.018461208004737273,
+   "speakers_s": 0.1806447080016369,
+   "products_s": 0.0012618330074474216,
+   "total_s": 3.405413707019761
   },
   {
    "id": "lec_photosynthesis_samantha_pink_5db",
@@ -2427,11 +2427,11 @@
     1,
     1
    ],
-   "asr_s": 2.6635992920055287,
-   "vad_s": 0.012592792001669295,
-   "speakers_s": 0.13317670799733605,
-   "products_s": 0.0010977919882861897,
-   "total_s": 2.8104747089819284
+   "asr_s": 3.3069852079934208,
+   "vad_s": 0.017817542000557296,
+   "speakers_s": 0.1708170829951996,
+   "products_s": 0.001400790992192924,
+   "total_s": 3.497029665973969
   },
   {
    "id": "lec_photosynthesis_samantha_babble_10db",
@@ -2472,11 +2472,11 @@
     1,
     1
    ],
-   "asr_s": 2.941851250012405,
-   "vad_s": 0.012708584006759338,
-   "speakers_s": 0.14327449999109376,
-   "products_s": 0.0011111660132883117,
-   "total_s": 3.098953667009482
+   "asr_s": 3.320733333006501,
+   "vad_s": 0.016674625003361143,
+   "speakers_s": 0.16830812499392778,
+   "products_s": 0.001313000000664033,
+   "total_s": 3.507038248993922
   },
   {
    "id": "lec_photosynthesis_samantha_babble_5db",
@@ -2517,11 +2517,11 @@
     1,
     1
    ],
-   "asr_s": 3.2123590409901226,
-   "vad_s": 0.013234042009571567,
-   "speakers_s": 0.12428537500090897,
-   "products_s": 0.001107916992623359,
-   "total_s": 3.3509946260164725
+   "asr_s": 3.587290541996481,
+   "vad_s": 0.014726249995874241,
+   "speakers_s": 0.17412870800762903,
+   "products_s": 0.0013320420257514343,
+   "total_s": 3.777487667015521
   },
   {
    "id": "lec_photosynthesis_samantha_reverb_rt60_0.4s",
@@ -2562,11 +2562,11 @@
     1,
     1
    ],
-   "asr_s": 3.4024857500044163,
-   "vad_s": 0.012639541004318744,
-   "speakers_s": 0.13418550000642426,
-   "products_s": 0.001094001010642387,
-   "total_s": 3.5504128340253374
+   "asr_s": 3.7558047089987667,
+   "vad_s": 0.016334582993295044,
+   "speakers_s": 0.16956258400750812,
+   "products_s": 0.001285124002606608,
+   "total_s": 3.942996582991327
   },
   {
    "id": "lec_photosynthesis_samantha_reverb_rt60_0.8s",
@@ -2607,11 +2607,11 @@
     1,
     1
    ],
-   "asr_s": 3.3039405419985997,
-   "vad_s": 0.012262500007636845,
-   "speakers_s": 0.13532937499985565,
-   "products_s": 0.0010464999941177666,
-   "total_s": 3.452586456987774
+   "asr_s": 3.7817098749947036,
+   "vad_s": 0.016836916998727247,
+   "speakers_s": 0.1716231659956975,
+   "products_s": 0.0013231679768068716,
+   "total_s": 3.971501959968009
   },
   {
    "id": "lec_photosynthesis_samantha_140wpm",
@@ -2652,11 +2652,11 @@
     1,
     1
    ],
-   "asr_s": 3.119174457999179,
-   "vad_s": 0.01333429200167302,
-   "speakers_s": 0.1913265839975793,
-   "products_s": 0.0015839999978197739,
-   "total_s": 3.325427292002132
+   "asr_s": 3.337592083000345,
+   "vad_s": 0.015559457999188453,
+   "speakers_s": 0.18225254100980237,
+   "products_s": 0.0012723330000881106,
+   "total_s": 3.536685290004243
   },
   {
    "id": "lec_photosynthesis_samantha_220wpm",
@@ -2697,11 +2697,11 @@
     1,
     1
    ],
-   "asr_s": 2.9027661659929436,
-   "vad_s": 0.013347542000701651,
-   "speakers_s": 0.10849883398623206,
-   "products_s": 0.0010582919931039214,
-   "total_s": 3.025679375976324
+   "asr_s": 3.1387665840011323,
+   "vad_s": 0.014051334001123905,
+   "speakers_s": 0.146862958004931,
+   "products_s": 0.0014137089892756194,
+   "total_s": 3.301104001002386
   },
   {
    "id": "lec_photosynthesis_daniel_white_20db",
@@ -2742,11 +2742,11 @@
     1,
     1
    ],
-   "asr_s": 3.004644417000236,
-   "vad_s": 0.012645000009797513,
-   "speakers_s": 0.13216295800521038,
-   "products_s": 0.001039541995851323,
-   "total_s": 3.1504988750239136
+   "asr_s": 3.454908208004781,
+   "vad_s": 0.017169625003589317,
+   "speakers_s": 0.17879983299644664,
+   "products_s": 0.0014102930144872516,
+   "total_s": 3.6522972940147156
   },
   {
    "id": "lec_photosynthesis_daniel_white_10db",
@@ -2787,11 +2787,11 @@
     1,
     1
    ],
-   "asr_s": 2.6853212919959333,
-   "vad_s": 0.012533291999716312,
-   "speakers_s": 0.14073645799362566,
-   "products_s": 0.0010899570042965934,
-   "total_s": 2.8396878729981836
+   "asr_s": 3.2051832909928635,
+   "vad_s": 0.017525290997582488,
+   "speakers_s": 0.18820404099824373,
+   "products_s": 0.0014024160045664757,
+   "total_s": 3.412324831006117
   },
   {
    "id": "lec_photosynthesis_daniel_white_5db",
@@ -2832,11 +2832,11 @@
     0,
     1
    ],
-   "asr_s": 3.213475374999689,
-   "vad_s": 0.012633792008273304,
-   "speakers_s": 0.1385365419992013,
-   "products_s": 0.0012352079938864335,
-   "total_s": 3.3658909170044353
+   "asr_s": 3.8085146249941317,
+   "vad_s": 0.017724582998198457,
+   "speakers_s": 0.1862657500023488,
+   "products_s": 0.0014319580077426508,
+   "total_s": 4.0139465410175035
   },
   {
    "id": "lec_photosynthesis_daniel_white_0db",
@@ -2877,11 +2877,11 @@
     0,
     1
    ],
-   "asr_s": 2.9907601669983706,
-   "vad_s": 0.012373749996186234,
-   "speakers_s": 0.1389743330073543,
-   "products_s": 0.0011280830221949145,
-   "total_s": 3.1432436650356976
+   "asr_s": 3.380341750002117,
+   "vad_s": 0.01787812499969732,
+   "speakers_s": 0.19108337500074413,
+   "products_s": 0.0014773329894524068,
+   "total_s": 3.5907907910004724
   },
   {
    "id": "lec_photosynthesis_daniel_pink_10db",
@@ -2922,11 +2922,11 @@
     1,
     1
    ],
-   "asr_s": 2.7340082500013523,
-   "vad_s": 0.012742459002765827,
-   "speakers_s": 0.13615012499212753,
-   "products_s": 0.0010893339931499213,
-   "total_s": 2.8839976269809995
+   "asr_s": 3.4762240840063896,
+   "vad_s": 0.01760808299877681,
+   "speakers_s": 0.18615008301276248,
+   "products_s": 0.0014273329870775342,
+   "total_s": 3.681418248990667
   },
   {
    "id": "lec_photosynthesis_daniel_pink_5db",
@@ -2967,11 +2967,11 @@
     1,
     1
    ],
-   "asr_s": 2.7779199159995187,
-   "vad_s": 0.012866624994785525,
-   "speakers_s": 0.13588337499822956,
-   "products_s": 0.0010872500133700669,
-   "total_s": 2.9277650830044877
+   "asr_s": 3.509001291997265,
+   "vad_s": 0.01728170800197404,
+   "speakers_s": 0.18686133399023674,
+   "products_s": 0.0014865840057609603,
+   "total_s": 3.714640958001837
   },
   {
    "id": "lec_photosynthesis_daniel_babble_10db",
@@ -3012,11 +3012,11 @@
     1,
     1
    ],
-   "asr_s": 2.763076834002277,
-   "vad_s": 0.011888458000612445,
-   "speakers_s": 0.12153883300197776,
-   "products_s": 0.001040832998114638,
-   "total_s": 2.8975527900038287
+   "asr_s": 3.6012528749997728,
+   "vad_s": 0.017522333000670187,
+   "speakers_s": 0.17571241701079998,
+   "products_s": 0.0014884579868521541,
+   "total_s": 3.796000415983144
   },
   {
    "id": "lec_photosynthesis_daniel_babble_5db",
@@ -3057,11 +3057,11 @@
     1,
     1
    ],
-   "asr_s": 2.7752931250142865,
-   "vad_s": 0.011929125001188368,
-   "speakers_s": 0.13044120799168013,
-   "products_s": 0.0010145400010515004,
-   "total_s": 2.9186852899874793
+   "asr_s": 3.6398352079995675,
+   "vad_s": 0.01778583299892489,
+   "speakers_s": 0.18156816701230127,
+   "products_s": 0.001280040989513509,
+   "total_s": 3.8404783740115818
   },
   {
    "id": "lec_photosynthesis_daniel_reverb_rt60_0.4s",
@@ -3102,11 +3102,11 @@
     1,
     1
    ],
-   "asr_s": 2.6680214579973835,
-   "vad_s": 0.011690584011375904,
-   "speakers_s": 0.13174558299942873,
-   "products_s": 0.001049666985636577,
-   "total_s": 2.812514375997125
+   "asr_s": 3.878344750002725,
+   "vad_s": 0.017648125009145588,
+   "speakers_s": 0.22703804199409205,
+   "products_s": 0.001573499001096934,
+   "total_s": 4.124623457988491
   },
   {
    "id": "lec_photosynthesis_daniel_reverb_rt60_0.8s",
@@ -3147,11 +3147,11 @@
     1,
     1
    ],
-   "asr_s": 2.7105810000066413,
-   "vad_s": 0.01178174999949988,
-   "speakers_s": 0.12320637500670273,
-   "products_s": 0.0010310409852536395,
-   "total_s": 2.8466082909872057
+   "asr_s": 3.9239104999869596,
+   "vad_s": 0.024002792008104734,
+   "speakers_s": 0.18780670799606014,
+   "products_s": 0.0014498329837806523,
+   "total_s": 4.137181374971988
   },
   {
    "id": "lec_photosynthesis_daniel_140wpm",
@@ -3192,11 +3192,11 @@
     1,
     1
    ],
-   "asr_s": 2.6701051659911172,
-   "vad_s": 0.013708208003663458,
-   "speakers_s": 0.1430556660052389,
-   "products_s": 0.0010198319796472788,
-   "total_s": 2.827896663991851
+   "asr_s": 3.960768666001968,
+   "vad_s": 0.020597708004061133,
+   "speakers_s": 0.20050837501185015,
+   "products_s": 0.001429708005161956,
+   "total_s": 4.18331829001545
   },
   {
    "id": "lec_photosynthesis_daniel_220wpm",
@@ -3237,11 +3237,11 @@
     1,
     1
    ],
-   "asr_s": 2.7060938749928027,
-   "vad_s": 0.009799209001357667,
-   "speakers_s": 0.10904266699799336,
-   "products_s": 0.0010327489871997386,
-   "total_s": 2.825975624975399
+   "asr_s": 4.0819077089981874,
+   "vad_s": 0.01581204100511968,
+   "speakers_s": 0.17698883300181478,
+   "products_s": 0.0017594999953871593,
+   "total_s": 4.276479164996999
   },
   {
    "id": "lec_photosynthesis_rishi_white_20db",
@@ -3282,11 +3282,11 @@
     1,
     1
    ],
-   "asr_s": 2.704467959003523,
-   "vad_s": 0.0146244170027785,
-   "speakers_s": 0.13790108299872372,
-   "products_s": 0.0010330410004826263,
-   "total_s": 2.858035248995293
+   "asr_s": 4.041410582998651,
+   "vad_s": 0.021335334007744677,
+   "speakers_s": 0.22298258299997542,
+   "products_s": 0.001535834016976878,
+   "total_s": 4.287274000031175
   },
   {
    "id": "lec_photosynthesis_rishi_white_10db",
@@ -3327,11 +3327,11 @@
     1,
     1
    ],
-   "asr_s": 3.0081682500022,
-   "vad_s": 0.012779084005160257,
-   "speakers_s": 0.13585375000548083,
-   "products_s": 0.0009956239955499768,
-   "total_s": 3.1578039990126854
+   "asr_s": 4.5305567090108525,
+   "vad_s": 0.019687041989527643,
+   "speakers_s": 0.2398397910001222,
+   "products_s": 0.0018397910171188414,
+   "total_s": 4.7919944989989744
   },
   {
    "id": "lec_photosynthesis_rishi_white_5db",
@@ -3372,11 +3372,11 @@
     1,
     1
    ],
-   "asr_s": 3.0162257079937262,
-   "vad_s": 0.013136416993802413,
-   "speakers_s": 0.13002758299990091,
-   "products_s": 0.0010016660089604557,
-   "total_s": 3.160398873995291
+   "asr_s": 4.403003375002299,
+   "vad_s": 0.020116833999054506,
+   "speakers_s": 0.20253087500168476,
+   "products_s": 0.001661165981204249,
+   "total_s": 4.6273264159826795
   },
   {
    "id": "lec_photosynthesis_rishi_white_0db",
@@ -3417,11 +3417,11 @@
     0,
     1
    ],
-   "asr_s": 2.9718099999881815,
-   "vad_s": 0.012799749994883314,
-   "speakers_s": 0.13987262498994824,
-   "products_s": 0.0011735830048564821,
-   "total_s": 3.125663082988467
+   "asr_s": 4.423263917007716,
+   "vad_s": 0.021183999997447245,
+   "speakers_s": 0.21358662498823833,
+   "products_s": 0.0019980830111308023,
+   "total_s": 4.660043374999077
   },
   {
    "id": "lec_photosynthesis_rishi_pink_10db",
@@ -3462,11 +3462,11 @@
     1,
     1
    ],
-   "asr_s": 2.988778832994285,
-   "vad_s": 0.012474916002247483,
-   "speakers_s": 0.13255191600183025,
-   "products_s": 0.0009923750039888546,
-   "total_s": 3.134805289999349
+   "asr_s": 4.354850666000857,
+   "vad_s": 0.020271332992706448,
+   "speakers_s": 0.18853200000012293,
+   "products_s": 0.0014447499997913837,
+   "total_s": 4.565109540999401
   },
   {
    "id": "lec_photosynthesis_rishi_pink_5db",
@@ -3507,11 +3507,11 @@
     1,
     1
    ],
-   "asr_s": 2.7198617919930257,
-   "vad_s": 0.012558499991428107,
-   "speakers_s": 0.1425874590058811,
-   "products_s": 0.0010049590055132285,
-   "total_s": 2.8760195420036325
+   "asr_s": 4.048380124993855,
+   "vad_s": 0.021454542002175003,
+   "speakers_s": 0.23162412499368656,
+   "products_s": 0.0013491249992512167,
+   "total_s": 4.3028191669873195
   },
   {
    "id": "lec_photosynthesis_rishi_babble_10db",
@@ -3552,11 +3552,11 @@
     1,
     1
    ],
-   "asr_s": 2.62565662500856,
-   "vad_s": 0.012845374993048608,
-   "speakers_s": 0.13573199999518692,
-   "products_s": 0.0009638330084271729,
-   "total_s": 2.7752049999980954
+   "asr_s": 5.258381666993955,
+   "vad_s": 0.05078433299786411,
+   "speakers_s": 0.23974795801041182,
+   "products_s": 0.0023043339897412807,
+   "total_s": 5.55129262599803
   },
   {
    "id": "lec_photosynthesis_rishi_babble_5db",
@@ -3597,11 +3597,11 @@
     1,
     1
    ],
-   "asr_s": 2.8246253749966854,
-   "vad_s": 0.013338499993551522,
-   "speakers_s": 0.1230632910010172,
-   "products_s": 0.0010472080030012876,
-   "total_s": 2.962081666002632
+   "asr_s": 5.4992957079957705,
+   "vad_s": 0.02062970800034236,
+   "speakers_s": 0.21359454200137407,
+   "products_s": 0.001663708986598067,
+   "total_s": 5.735207583988085
   },
   {
    "id": "lec_photosynthesis_rishi_reverb_rt60_0.4s",
@@ -3642,11 +3642,11 @@
     1,
     1
    ],
-   "asr_s": 2.542585584000335,
-   "vad_s": 0.012884790994576178,
-   "speakers_s": 0.167350957999588,
-   "products_s": 0.00112749999971129,
-   "total_s": 2.7239636659942335
+   "asr_s": 3.829063209006563,
+   "vad_s": 0.02000616700388491,
+   "speakers_s": 0.1880814169999212,
+   "products_s": 0.0014594570093322545,
+   "total_s": 4.038621582003543
   },
   {
    "id": "lec_photosynthesis_rishi_reverb_rt60_0.8s",
@@ -3687,11 +3687,11 @@
     1,
     1
    ],
-   "asr_s": 2.880742958004703,
-   "vad_s": 0.01269799999136012,
-   "speakers_s": 0.12657745800970588,
-   "products_s": 0.0010273749940097332,
-   "total_s": 3.0210534169891616
+   "asr_s": 3.837956374991336,
+   "vad_s": 0.02014008301193826,
+   "speakers_s": 0.18836937499872874,
+   "products_s": 0.0013077089824946597,
+   "total_s": 4.047783209010959
   },
   {
    "id": "lec_photosynthesis_rishi_140wpm",
@@ -3732,11 +3732,11 @@
     1,
     1
    ],
-   "asr_s": 3.386368916995707,
-   "vad_s": 0.013351916990359314,
-   "speakers_s": 0.2446207089960808,
-   "products_s": 0.0037841249868506566,
-   "total_s": 3.6481450419669272
+   "asr_s": 3.969592666995595,
+   "vad_s": 0.01988866699684877,
+   "speakers_s": 0.23147012499975972,
+   "products_s": 0.001462875006836839,
+   "total_s": 4.22242395801004
   },
   {
    "id": "lec_photosynthesis_rishi_220wpm",
@@ -3777,11 +3777,11 @@
     1,
     1
    ],
-   "asr_s": 3.1882211250049295,
-   "vad_s": 0.011725709002348594,
-   "speakers_s": 0.12916908400075044,
-   "products_s": 0.0010772910027299076,
-   "total_s": 3.330201083997963
+   "asr_s": 3.8670677080081077,
+   "vad_s": 0.01554858400777448,
+   "speakers_s": 0.16253637500631157,
+   "products_s": 0.0014995000092312694,
+   "total_s": 4.046662709020893
   },
   {
    "id": "lec_newton_samantha_white_20db",
@@ -3822,11 +3822,11 @@
     1,
     1
    ],
-   "asr_s": 2.6959237920091255,
-   "vad_s": 0.014845249999780208,
-   "speakers_s": 0.10846925000078045,
-   "products_s": 0.001203124993480742,
-   "total_s": 2.820449374979944
+   "asr_s": 3.260287833996699,
+   "vad_s": 0.01652704099251423,
+   "speakers_s": 0.170249207993038,
+   "products_s": 0.0015443750016856939,
+   "total_s": 3.448618081980385
   },
   {
    "id": "lec_newton_samantha_white_10db",
@@ -3867,11 +3867,11 @@
     1,
     1
    ],
-   "asr_s": 2.6687427919969196,
-   "vad_s": 0.010996707991580479,
-   "speakers_s": 0.11389708399656229,
-   "products_s": 0.0012947919894941151,
-   "total_s": 2.7949387499829754
+   "asr_s": 3.3432910409901524,
+   "vad_s": 0.01631604100111872,
+   "speakers_s": 0.1773996249976335,
+   "products_s": 0.0013609999878099188,
+   "total_s": 3.538376957993023
   },
   {
    "id": "lec_newton_samantha_white_5db",
@@ -3912,11 +3912,11 @@
     1,
     1
    ],
-   "asr_s": 2.98307562500122,
-   "vad_s": 0.012387584007228725,
-   "speakers_s": 0.1250015830009943,
-   "products_s": 0.0012525840138550848,
-   "total_s": 3.1217293350055115
+   "asr_s": 3.797869999994873,
+   "vad_s": 0.01614758301002439,
+   "speakers_s": 0.16744341699813958,
+   "products_s": 0.0015349999885074794,
+   "total_s": 3.9830054990015924
   },
   {
    "id": "lec_newton_samantha_white_0db",
@@ -3957,11 +3957,11 @@
     1,
     1
    ],
-   "asr_s": 3.370737375007593,
-   "vad_s": 0.016316499997628853,
-   "speakers_s": 0.12906991700583603,
-   "products_s": 0.0012737919896608219,
-   "total_s": 3.5174168339872267
+   "asr_s": 3.772530749993166,
+   "vad_s": 0.01574333400640171,
+   "speakers_s": 0.16028979200928006,
+   "products_s": 0.0015106260107131675,
+   "total_s": 3.950084168027388
   },
   {
    "id": "lec_newton_samantha_pink_10db",
@@ -4002,11 +4002,11 @@
     1,
     1
    ],
-   "asr_s": 2.628508540990879,
-   "vad_s": 0.012092167002265342,
-   "speakers_s": 0.12729629199020565,
-   "products_s": 0.0012143759813625365,
-   "total_s": 2.7691187509626616
+   "asr_s": 3.212526415998582,
+   "vad_s": 0.015233375001116656,
+   "speakers_s": 0.15832241700263694,
+   "products_s": 0.00136749999364838,
+   "total_s": 3.387459707984817
   },
   {
    "id": "lec_newton_samantha_pink_5db",
@@ -4047,11 +4047,11 @@
     1,
     1
    ],
-   "asr_s": 2.7684642499953043,
-   "vad_s": 0.011885166997672059,
-   "speakers_s": 0.1074143329897197,
-   "products_s": 0.001193042000522837,
-   "total_s": 2.8889644169830717
+   "asr_s": 3.1781916660111165,
+   "vad_s": 0.015965958999004215,
+   "speakers_s": 0.1588448749971576,
+   "products_s": 0.001481875020544976,
+   "total_s": 3.3544936680118553
   },
   {
    "id": "lec_newton_samantha_babble_10db",
@@ -4092,11 +4092,11 @@
     1,
     1
    ],
-   "asr_s": 2.980506416002754,
-   "vad_s": 0.012319540997850709,
-   "speakers_s": 0.13633979199221358,
-   "products_s": 0.0012180009944131598,
-   "total_s": 3.1303910839778837
+   "asr_s": 3.2452579579985468,
+   "vad_s": 0.012598375004017726,
+   "speakers_s": 0.18078899999090936,
+   "products_s": 0.0014489570166915655,
+   "total_s": 3.440105082016089
   },
   {
    "id": "lec_newton_samantha_babble_5db",
@@ -4137,11 +4137,11 @@
     1,
     1
    ],
-   "asr_s": 2.883187291008653,
-   "vad_s": 0.01199912499578204,
-   "speakers_s": 0.13054579199524596,
-   "products_s": 0.001207709006848745,
-   "total_s": 3.0269471689971397
+   "asr_s": 3.2252387500047917,
+   "vad_s": 0.015579833998344839,
+   "speakers_s": 0.1523390410002321,
+   "products_s": 0.0012894159881398082,
+   "total_s": 3.394456206995528
   },
   {
    "id": "lec_newton_samantha_reverb_rt60_0.4s",
@@ -4182,11 +4182,11 @@
     1,
     1
    ],
-   "asr_s": 3.214586749993032,
-   "vad_s": 0.01414162501168903,
-   "speakers_s": 0.18863133300328627,
-   "products_s": 0.001170332994661294,
-   "total_s": 3.418538082012674
+   "asr_s": 3.4843829159945017,
+   "vad_s": 0.014195249998010695,
+   "speakers_s": 0.1479889159963932,
+   "products_s": 0.001405123999575153,
+   "total_s": 3.6479814989870647
   },
   {
    "id": "lec_newton_samantha_reverb_rt60_0.8s",
@@ -4227,11 +4227,11 @@
     1,
     1
    ],
-   "asr_s": 3.497046832999331,
-   "vad_s": 0.01658237499941606,
-   "speakers_s": 0.13692787499167025,
-   "products_s": 0.00140804098919034,
-   "total_s": 3.651973581989296
+   "asr_s": 3.566193167003803,
+   "vad_s": 0.014257125003496185,
+   "speakers_s": 0.17464895801094826,
+   "products_s": 0.0015388749889098108,
+   "total_s": 3.756652333002421
   },
   {
    "id": "lec_newton_samantha_140wpm",
@@ -4272,11 +4272,11 @@
     1,
     1
    ],
-   "asr_s": 3.5742753749946132,
-   "vad_s": 0.01506908300507348,
-   "speakers_s": 0.16696712499833666,
-   "products_s": 0.0012995420111110434,
-   "total_s": 3.7576209580147406
+   "asr_s": 3.3676117499999236,
+   "vad_s": 0.014436792000196874,
+   "speakers_s": 0.17078958399361,
+   "products_s": 0.0013282919971970841,
+   "total_s": 3.5541761269705603
   },
   {
    "id": "lec_newton_samantha_220wpm",
@@ -4317,11 +4317,11 @@
     1,
     1
    ],
-   "asr_s": 3.0342353329906473,
-   "vad_s": 0.013264166002045386,
-   "speakers_s": 0.1534379579970846,
-   "products_s": 0.0013073330046609044,
-   "total_s": 3.2022533739946084
+   "asr_s": 2.9627064999949653,
+   "vad_s": 0.011188499993295409,
+   "speakers_s": 0.13109779200749472,
+   "products_s": 0.0015998330200091004,
+   "total_s": 3.106601709019742
   },
   {
    "id": "lec_newton_daniel_white_20db",
@@ -4362,11 +4362,11 @@
     1,
     1
    ],
-   "asr_s": 3.364524040996912,
-   "vad_s": 0.01620520900178235,
-   "speakers_s": 0.16065691600670107,
-   "products_s": 0.0012278329959372059,
-   "total_s": 3.5426272909971885
+   "asr_s": 3.465675083993119,
+   "vad_s": 0.014372333011124283,
+   "speakers_s": 0.1677362920017913,
+   "products_s": 0.001396459003444761,
+   "total_s": 3.6491896670340793
   },
   {
    "id": "lec_newton_daniel_white_10db",
@@ -4407,11 +4407,11 @@
     1,
     1
    ],
-   "asr_s": 3.037034707987914,
-   "vad_s": 0.013213208003435284,
-   "speakers_s": 0.14645100000780076,
-   "products_s": 0.0012487909843912348,
-   "total_s": 3.197957331984071
+   "asr_s": 3.204172750003636,
+   "vad_s": 0.015887916990322992,
+   "speakers_s": 0.17794858300476335,
+   "products_s": 0.001400832989020273,
+   "total_s": 3.3994204569753492
   },
   {
    "id": "lec_newton_daniel_white_5db",
@@ -4452,11 +4452,11 @@
     1,
     1
    ],
-   "asr_s": 3.7605427079979563,
-   "vad_s": 0.015284458000678569,
-   "speakers_s": 0.16625179100083187,
-   "products_s": 0.001302709017181769,
-   "total_s": 3.9433974170096917
+   "asr_s": 3.926267832997837,
+   "vad_s": 0.014559999995981343,
+   "speakers_s": 0.22661825000250246,
+   "products_s": 0.001532373993541114,
+   "total_s": 4.168988081990392
   },
   {
    "id": "lec_newton_daniel_white_0db",
@@ -4497,11 +4497,11 @@
     1,
     1
    ],
-   "asr_s": 3.2484943750023376,
-   "vad_s": 0.01591550000011921,
-   "speakers_s": 0.15027962499880232,
-   "products_s": 0.0012737079814542085,
-   "total_s": 3.415973249982926
+   "asr_s": 3.4376786250068108,
+   "vad_s": 0.016919415997108445,
+   "speakers_s": 0.1831245830107946,
+   "products_s": 0.0015962910110829398,
+   "total_s": 3.6393440820102114
   },
   {
    "id": "lec_newton_daniel_pink_10db",
@@ -4542,11 +4542,11 @@
     1,
     1
    ],
-   "asr_s": 3.374508875000174,
-   "vad_s": 0.013313458999618888,
-   "speakers_s": 0.12725570799375419,
-   "products_s": 0.0013168750156182796,
-   "total_s": 3.51640358401346
+   "asr_s": 3.4861891249893233,
+   "vad_s": 0.01532033299736213,
+   "speakers_s": 0.20726762499543838,
+   "products_s": 0.0014321670169010758,
+   "total_s": 3.7102185420080787
   },
   {
    "id": "lec_newton_daniel_pink_5db",
@@ -4587,11 +4587,11 @@
     1,
     1
    ],
-   "asr_s": 3.16100470899255,
-   "vad_s": 0.01803329199901782,
-   "speakers_s": 0.28910658399399836,
-   "products_s": 0.0017253759870072827,
-   "total_s": 3.4698789609828964
+   "asr_s": 3.162889750004979,
+   "vad_s": 0.015851083997404203,
+   "speakers_s": 0.16770374999032356,
+   "products_s": 0.0014100840053288266,
+   "total_s": 3.3478649589960696
   },
   {
    "id": "lec_newton_daniel_babble_10db",
@@ -4632,11 +4632,11 @@
     1,
     1
    ],
-   "asr_s": 3.348593749993597,
-   "vad_s": 0.01756966700486373,
-   "speakers_s": 0.15418420798960142,
-   "products_s": 0.001267458006623201,
-   "total_s": 3.521625124005368
+   "asr_s": 3.2515608749963576,
+   "vad_s": 0.01559770799940452,
+   "speakers_s": 0.1552447919966653,
+   "products_s": 0.0012459169811336324,
+   "total_s": 3.4236609999643406
   },
   {
    "id": "lec_newton_daniel_babble_5db",
@@ -4677,11 +4677,11 @@
     1,
     1
    ],
-   "asr_s": 3.069624958006898,
-   "vad_s": 0.013109332998283207,
-   "speakers_s": 0.15806108299875632,
-   "products_s": 0.0012918760039610788,
-   "total_s": 3.2420950420055306
+   "asr_s": 3.0469496669975342,
+   "vad_s": 0.014890249993186444,
+   "speakers_s": 0.15613912499975413,
+   "products_s": 0.0013881670165574178,
+   "total_s": 3.21937683300348
   },
   {
    "id": "lec_newton_daniel_reverb_rt60_0.4s",
@@ -4722,11 +4722,11 @@
     1,
     1
    ],
-   "asr_s": 3.2976157500088448,
-   "vad_s": 0.01480533299036324,
-   "speakers_s": 0.12940941700071562,
-   "products_s": 0.0012047080090269446,
-   "total_s": 3.4430429990025004
+   "asr_s": 3.275355874997331,
+   "vad_s": 0.014622834001784213,
+   "speakers_s": 0.14782391699554864,
+   "products_s": 0.0012538319861050695,
+   "total_s": 3.439064790974953
   },
   {
    "id": "lec_newton_daniel_reverb_rt60_0.8s",
@@ -4767,11 +4767,11 @@
     1,
     1
    ],
-   "asr_s": 3.5125484579912154,
-   "vad_s": 0.014347999996971339,
-   "speakers_s": 0.15418399999907706,
-   "products_s": 0.0011773760052165017,
-   "total_s": 3.6822657090087887
+   "asr_s": 3.558605500002159,
+   "vad_s": 0.013833457996952347,
+   "speakers_s": 0.13708554199547507,
+   "products_s": 0.0012115420104237273,
+   "total_s": 3.7107442080014152
   },
   {
    "id": "lec_newton_daniel_140wpm",
@@ -4812,11 +4812,11 @@
     1,
     1
    ],
-   "asr_s": 3.6225267909903778,
-   "vad_s": 0.015150291990721598,
-   "speakers_s": 0.15694512499612756,
-   "products_s": 0.0013102090015308931,
-   "total_s": 3.7959403749846388
+   "asr_s": 3.6929383750102716,
+   "vad_s": 0.014642666996223852,
+   "speakers_s": 0.1503987500036601,
+   "products_s": 0.0013433330022962764,
+   "total_s": 3.859337041998515
   },
   {
    "id": "lec_newton_daniel_220wpm",
@@ -4857,11 +4857,11 @@
     1,
     1
    ],
-   "asr_s": 3.0046909999946365,
-   "vad_s": 0.011244624998653308,
-   "speakers_s": 0.1242845410015434,
-   "products_s": 0.0013517920015146956,
-   "total_s": 3.1415896250109654
+   "asr_s": 3.085843124994426,
+   "vad_s": 0.01165016699815169,
+   "speakers_s": 0.14169666700763628,
+   "products_s": 0.0015243759989971295,
+   "total_s": 3.2407247520022793
   },
   {
    "id": "lec_newton_rishi_white_20db",
@@ -4902,11 +4902,11 @@
     1,
     1
    ],
-   "asr_s": 3.5470590839977376,
-   "vad_s": 0.01688799999828916,
-   "speakers_s": 0.15170416599721648,
-   "products_s": 0.001154125013272278,
-   "total_s": 3.716813874998479
+   "asr_s": 4.1190123749984195,
+   "vad_s": 0.0175874999986263,
+   "speakers_s": 0.18213670799741521,
+   "products_s": 0.001528917986433953,
+   "total_s": 4.320274834972224
   },
   {
    "id": "lec_newton_rishi_white_10db",
@@ -4947,11 +4947,11 @@
     1,
     1
    ],
-   "asr_s": 2.9896965000079945,
-   "vad_s": 0.012963959001353942,
-   "speakers_s": 0.1191466249874793,
-   "products_s": 0.001220624995767139,
-   "total_s": 3.1230350009864196
+   "asr_s": 3.693461707996903,
+   "vad_s": 0.017766375007340685,
+   "speakers_s": 0.1808503749925876,
+   "products_s": 0.0015183330106083304,
+   "total_s": 3.8936063750006724
   },
   {
    "id": "lec_newton_rishi_white_5db",
@@ -4992,11 +4992,11 @@
     1,
     1
    ],
-   "asr_s": 2.7081370420055464,
-   "vad_s": 0.013165249998564832,
-   "speakers_s": 0.1392186250013765,
-   "products_s": 0.0012517499999376014,
-   "total_s": 2.8617814159952104
+   "asr_s": 3.4068229169934057,
+   "vad_s": 0.01757141599955503,
+   "speakers_s": 0.18247908299963456,
+   "products_s": 0.0014955419901525602,
+   "total_s": 3.608378915989306
   },
   {
    "id": "lec_newton_rishi_white_0db",
@@ -5037,11 +5037,11 @@
     1,
     1
    ],
-   "asr_s": 3.3817454170057317,
-   "vad_s": 0.013712959000258707,
-   "speakers_s": 0.16551966698898468,
-   "products_s": 0.0011644979967968538,
-   "total_s": 3.5621499989792937
+   "asr_s": 4.1666064169985475,
+   "vad_s": 0.01801912499649916,
+   "speakers_s": 0.18016375000297558,
+   "products_s": 0.0015892489900579676,
+   "total_s": 4.366388790978817
   },
   {
    "id": "lec_newton_rishi_pink_10db",
@@ -5082,11 +5082,11 @@
     1,
     1
    ],
-   "asr_s": 2.9790495830093278,
-   "vad_s": 0.013740374997723848,
-   "speakers_s": 0.12251941599242855,
-   "products_s": 0.0011746660165954381,
-   "total_s": 3.116491581007722
+   "asr_s": 3.6201347909955075,
+   "vad_s": 0.01780950000102166,
+   "speakers_s": 0.1777642919914797,
+   "products_s": 0.001592626009369269,
+   "total_s": 3.817310833997908
   },
   {
    "id": "lec_newton_rishi_pink_5db",
@@ -5127,11 +5127,11 @@
     1,
     1
    ],
-   "asr_s": 2.8865047090075677,
-   "vad_s": 0.013010417009354569,
-   "speakers_s": 0.13818816599086858,
-   "products_s": 0.0011699589958880097,
-   "total_s": 3.038881082989974
+   "asr_s": 3.7336289579980075,
+   "vad_s": 0.017654875002335757,
+   "speakers_s": 0.1773654999997234,
+   "products_s": 0.001588291983352974,
+   "total_s": 3.930248374977964
   },
   {
    "id": "lec_newton_rishi_babble_10db",
@@ -5172,11 +5172,11 @@
     1,
     1
    ],
-   "asr_s": 3.3719114999985322,
-   "vad_s": 0.01287541700003203,
-   "speakers_s": 0.1293349589977879,
-   "products_s": 0.0010964580142172053,
-   "total_s": 3.515227459007292
+   "asr_s": 4.3284713750035735,
+   "vad_s": 0.017667374995653518,
+   "speakers_s": 0.16200120899884496,
+   "products_s": 0.0013534999889088795,
+   "total_s": 4.509503541979939
   },
   {
    "id": "lec_newton_rishi_babble_5db",
@@ -5217,11 +5217,11 @@
     1,
     1
    ],
-   "asr_s": 2.8902349999989383,
-   "vad_s": 0.013907040993217379,
-   "speakers_s": 0.14407129200117197,
-   "products_s": 0.0011040820099879056,
-   "total_s": 3.049324956999044
+   "asr_s": 3.377170749998186,
+   "vad_s": 0.016604582997388206,
+   "speakers_s": 0.16994912500376813,
+   "products_s": 0.0012734989868476987,
+   "total_s": 3.565006706994609
   },
   {
    "id": "lec_newton_rishi_reverb_rt60_0.4s",
@@ -5262,11 +5262,11 @@
     1,
     1
    ],
-   "asr_s": 2.9248366249958053,
-   "vad_s": 0.01263391599059105,
-   "speakers_s": 0.10918179100553971,
-   "products_s": 0.0012193340226076543,
-   "total_s": 3.0478794170194305
+   "asr_s": 3.5236268330045277,
+   "vad_s": 0.014914375002263114,
+   "speakers_s": 0.1564940829994157,
+   "products_s": 0.0012452100199880078,
+   "total_s": 3.696289167011855
   },
   {
    "id": "lec_newton_rishi_reverb_rt60_0.8s",
@@ -5307,11 +5307,11 @@
     1,
     1
    ],
-   "asr_s": 2.9745476669922937,
-   "vad_s": 0.012297332999878563,
-   "speakers_s": 0.14480475000164006,
-   "products_s": 0.001192790994537063,
-   "total_s": 3.132850623995182
+   "asr_s": 3.5463740840059472,
+   "vad_s": 0.014220208002370782,
+   "speakers_s": 0.1668843749939697,
+   "products_s": 0.0014044580166228116,
+   "total_s": 3.728892250030185
   },
   {
    "id": "lec_newton_rishi_140wpm",
@@ -5352,11 +5352,11 @@
     1,
     1
    ],
-   "asr_s": 3.1706027920008637,
-   "vad_s": 0.013709709004615434,
-   "speakers_s": 0.15017270798853133,
-   "products_s": 0.0011300009937258437,
-   "total_s": 3.3356241680012317
+   "asr_s": 3.7171707500092452,
+   "vad_s": 0.015390500004286878,
+   "speakers_s": 0.18541670800186694,
+   "products_s": 0.001426167000317946,
+   "total_s": 3.919412249015295
   },
   {
    "id": "lec_newton_rishi_220wpm",
@@ -5397,11 +5397,11 @@
     1,
     1
    ],
-   "asr_s": 2.905264917004388,
-   "vad_s": 0.010324916991521604,
-   "speakers_s": 0.1109686249983497,
-   "products_s": 0.0011956660164287314,
-   "total_s": 3.0277614150109002
+   "asr_s": 3.48602724999364,
+   "vad_s": 0.011663625002256595,
+   "speakers_s": 0.12342799999169074,
+   "products_s": 0.0011826260015368462,
+   "total_s": 3.6223105839890195
   },
   {
    "id": "meet_course_staff",
@@ -5445,11 +5445,11 @@
     1,
     2
    ],
-   "asr_s": 2.452015125003527,
-   "vad_s": 0.011144874995807186,
-   "speakers_s": 0.129328875002102,
-   "products_s": 0.0010251670028083026,
-   "total_s": 2.593521166985738
+   "asr_s": 2.928856749989791,
+   "vad_s": 0.016914457999519072,
+   "speakers_s": 0.16400900000007823,
+   "products_s": 0.0012272500025574118,
+   "total_s": 3.111015917005716
   },
   {
    "id": "meet_course_staff_white_10db",
@@ -5493,11 +5493,11 @@
     0,
     2
    ],
-   "asr_s": 2.445861042011529,
-   "vad_s": 0.011815667006885633,
-   "speakers_s": 0.11146437498973683,
-   "products_s": 0.0010872090060729533,
-   "total_s": 2.570235251012491
+   "asr_s": 3.1005548749963054,
+   "vad_s": 0.013236625003628433,
+   "speakers_s": 0.14120466700114775,
+   "products_s": 0.0012845419842051342,
+   "total_s": 3.256289001001278
   },
   {
    "id": "meet_research_weekly",
@@ -5541,11 +5541,11 @@
     1,
     1
    ],
-   "asr_s": 2.4400287500029663,
-   "vad_s": 0.010095124991494231,
-   "speakers_s": 0.12138208300166298,
-   "products_s": 0.001060832990333438,
-   "total_s": 2.572574165984406
+   "asr_s": 3.2146983330021612,
+   "vad_s": 0.012667957998928614,
+   "speakers_s": 0.13959095800237264,
+   "products_s": 0.001225499014253728,
+   "total_s": 3.368191874018521
   },
   {
    "id": "meet_research_weekly_white_10db",
@@ -5589,11 +5589,11 @@
     1,
     1
    ],
-   "asr_s": 2.265817874998902,
-   "vad_s": 0.010585707990685478,
-   "speakers_s": 0.11908650000987109,
-   "products_s": 0.0010841670009540394,
-   "total_s": 2.3965812500100583
+   "asr_s": 2.9535948340053437,
+   "vad_s": 0.01218379101192113,
+   "speakers_s": 0.1479146670026239,
+   "products_s": 0.0013156250061001629,
+   "total_s": 3.1150178760290146
   },
   {
    "id": "meet_product_sync",
@@ -5637,11 +5637,11 @@
     1,
     1
    ],
-   "asr_s": 2.1489804160082713,
-   "vad_s": 0.009230042007402517,
-   "speakers_s": 0.09649537500808947,
-   "products_s": 0.0010024999937741086,
-   "total_s": 2.2557151670043822
+   "asr_s": 2.8156750420021126,
+   "vad_s": 0.01132191599754151,
+   "speakers_s": 0.11110316698614042,
+   "products_s": 0.0011550830240594223,
+   "total_s": 2.939264249012922
   },
   {
    "id": "meet_product_sync_white_10db",
@@ -5685,11 +5685,11 @@
     1,
     1
    ],
-   "asr_s": 2.1257477089966414,
-   "vad_s": 0.00955291600257624,
-   "speakers_s": 0.10183600000164006,
-   "products_s": 0.001078043002053164,
-   "total_s": 2.2382222500018543
+   "asr_s": 2.7447991660010302,
+   "vad_s": 0.011070417007431388,
+   "speakers_s": 0.12887654099904466,
+   "products_s": 0.001305375000811182,
+   "total_s": 2.886060291028116
   },
   {
    "id": "meet_incident_review",
@@ -5733,11 +5733,11 @@
     1,
     1
    ],
-   "asr_s": 2.2411010829964653,
-   "vad_s": 0.009796042009838857,
-   "speakers_s": 0.11133479200361762,
-   "products_s": 0.0010652500059222803,
-   "total_s": 2.363303917009034
+   "asr_s": 3.6590106669900706,
+   "vad_s": 0.0124200840073172,
+   "speakers_s": 0.16997920800349675,
+   "products_s": 0.0015183330106083304,
+   "total_s": 3.842938458023127
   },
   {
    "id": "meet_incident_review_white_10db",
@@ -5781,11 +5781,11 @@
     1,
     1
    ],
-   "asr_s": 2.2535390420089243,
-   "vad_s": 0.010085040994454175,
-   "speakers_s": 0.11625516699859872,
-   "products_s": 0.0010184589918935671,
-   "total_s": 2.3809040839696536
+   "asr_s": 3.2351696670084493,
+   "vad_s": 0.01557137499912642,
+   "speakers_s": 0.14002704199810978,
+   "products_s": 0.001211667011375539,
+   "total_s": 3.3919907079980476
   }
  ]
 }
