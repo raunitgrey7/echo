@@ -11,6 +11,7 @@ benchmark row produced with this backend is labelled ``mock`` and never presente
 from __future__ import annotations
 
 import hashlib
+import re
 import time
 from collections.abc import Callable
 
@@ -22,6 +23,7 @@ from echo.vad.energy import DEFAULT_VAD, SpeechRegion, VadConfig, detect_speech
 
 Oracle = Callable[[Audio], str | None]
 PLACEHOLDER = "[speech]"
+_SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+")
 
 
 def audio_digest(audio: Audio) -> str:
@@ -60,12 +62,29 @@ def spread_words(words: list[str], regions: list[SpeechRegion]) -> list[Segment]
     for index, (region, count) in enumerate(zip(regions, counts, strict=True)):
         chunk = words[cursor : cursor + max(count, 0)]
         cursor += max(count, 0)
-        if not chunk:
-            continue
-        step = region.duration / len(chunk)
-        timed = tuple(Word(w, region.start + i * step, region.start + (i + 1) * step) for i, w in enumerate(chunk))
-        segments.append(Segment(index, region.start, region.end, " ".join(chunk), timed))
+        if chunk:
+            segments.append(_segment(index, region, chunk))
     return segments
+
+
+def spread_sentences(sentences: list[list[str]], regions: list[SpeechRegion]) -> list[Segment]:
+    """One sentence per region, which is how the corpus is composed; callers check the counts match."""
+    return [
+        _segment(index, region, words)
+        for index, (region, words) in enumerate(zip(regions, sentences, strict=True))
+        if words
+    ]
+
+
+def _segment(index: int, region: SpeechRegion, words: list[str]) -> Segment:
+    step = region.duration / len(words)
+    timed = tuple(Word(w, region.start + i * step, region.start + (i + 1) * step) for i, w in enumerate(words))
+    return Segment(index, region.start, region.end, " ".join(words), timed)
+
+
+def split_sentences(reference: str) -> list[list[str]]:
+    """Reference text split at sentence punctuation into word lists."""
+    return [part.split() for part in _SENTENCE_SPLIT.split(reference.strip()) if part.strip()]
 
 
 class MockTranscriber:
@@ -87,19 +106,28 @@ class MockTranscriber:
         self.model = f"mock-oracle-wer{error_rate:.2f}"
 
     def transcribe(self, audio: Audio, language: str = "en") -> TranscriptionResult:
-        """Emit the oracle text (or placeholders) over the detected speech regions."""
+        """Emit the oracle text (or placeholders) over the detected speech regions.
+
+        When the reference has exactly one sentence per speech region, each sentence lands in its
+        own region so sentence spans line up with the true turns; otherwise words are spread by
+        region duration.
+        """
         started = time.perf_counter()
         regions = detect_speech(audio, self.vad_config)
         reference = self.oracle(audio) if self.oracle is not None else None
         if reference is None:
-            words = [PLACEHOLDER for _ in regions]
+            segments = spread_words([PLACEHOLDER for _ in regions], regions)
         else:
             seed_material = f"{self.seed}:{audio_digest(audio)}".encode()
             rng = np.random.default_rng(int.from_bytes(hashlib.sha256(seed_material).digest()[:8], "big"))
-            words = corrupt_words(reference.split(), self.error_rate, rng)
-        segments = tuple(spread_words(words, regions))
+            sentences = split_sentences(reference)
+            if len(sentences) == len(regions):
+                corrupted = [corrupt_words(words, self.error_rate, rng) for words in sentences]
+                segments = spread_sentences(corrupted, regions)
+            else:
+                segments = spread_words(corrupt_words(reference.split(), self.error_rate, rng), regions)
         return TranscriptionResult(
-            segments=segments,
+            segments=tuple(segments),
             language=language,
             backend=self.name,
             model=self.model,

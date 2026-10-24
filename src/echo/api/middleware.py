@@ -29,6 +29,7 @@ class JsonFormatter(logging.Formatter):
     """One JSON object per log line."""
 
     def format(self, record: logging.LogRecord) -> str:
+        """Serialise one record, merging ``extra_fields`` when a caller attached them."""
         payload: dict[str, Any] = {
             "ts": self.formatTime(record, "%Y-%m-%dT%H:%M:%S"),
             "level": record.levelname,
@@ -107,6 +108,7 @@ class RequestContextMiddleware:
         status_holder = {"status": 500}
 
         async def send_with_id(message: MutableMapping[str, Any]) -> None:
+            """Stamp the response with the request id."""
             if message["type"] == "http.response.start":
                 status_holder["status"] = message["status"]
                 message["headers"] = [*message.get("headers", []), (REQUEST_ID_HEADER, request_id.encode())]

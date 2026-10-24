@@ -135,6 +135,7 @@ def create_app(settings: Settings | None = None, transcriber: Transcriber | None
 
     @asynccontextmanager
     async def lifespan(_: FastAPI) -> AsyncIterator[None]:
+        """Resolve the ASR backend once at startup."""
         engine["asr"] = transcriber or resolve_transcriber(cfg.backend, cfg.model_size)
         logger.info("asr ready", extra={"extra_fields": {"backend": engine["asr"].name, "model": engine["asr"].model}})
         yield
@@ -154,6 +155,7 @@ def create_app(settings: Settings | None = None, transcriber: Transcriber | None
 
 def _require_key(settings: Settings) -> Any:
     async def dependency(request: Request) -> None:
+        """Reject requests without the configured API key."""
         if settings.api_key and request.headers.get("x-api-key") != settings.api_key:
             raise HTTPException(status.HTTP_401_UNAUTHORIZED, "invalid or missing X-API-Key header")
 
@@ -172,15 +174,18 @@ def _register_core(
 ) -> None:
     @app.exception_handler(HTTPException)
     async def http_error(request: Request, exc: HTTPException) -> JSONResponse:
+        """Error body with the request id so a client can quote it."""
         request_id = getattr(request.state, "request_id", None)
         return JSONResponse({"detail": exc.detail, "request_id": request_id}, status_code=exc.status_code)
 
     @app.get("/", response_class=HTMLResponse, include_in_schema=False)
     async def index() -> str:
+        """The dashboard."""
         return (STATIC_DIR / "index.html").read_text(encoding="utf-8")
 
     @app.get("/health", response_model=HealthOut)
     async def health() -> dict[str, Any]:
+        """Liveness plus which backend is loaded."""
         asr = engine.get("asr")
         return {
             "status": "ok" if asr else "starting",
@@ -194,6 +199,7 @@ def _register_core(
 
     @app.get("/metrics", include_in_schema=False)
     async def prometheus() -> Response:
+        """Prometheus text exposition."""
         return Response(generate_latest(metrics.registry), media_type=CONTENT_TYPE_LATEST)
 
 
@@ -207,6 +213,7 @@ def _register_jobs(
     async def create_job(
         file: Annotated[UploadFile, File()], title: Annotated[str | None, Form()] = None
     ) -> dict[str, Any]:
+        """Analyse an uploaded PCM WAV file synchronously and return every product."""
         raw = await file.read()
         if len(raw) > cfg.max_upload_mb * 1024 * 1024:
             raise HTTPException(status.HTTP_413_CONTENT_TOO_LARGE, f"upload exceeds {cfg.max_upload_mb:g} MB")
@@ -218,24 +225,29 @@ def _register_jobs(
 
     @app.post("/v1/demo", response_model=JobOut, status_code=created, dependencies=[auth])
     async def demo() -> dict[str, Any]:
+        """Analyse a short synthetic meeting so the dashboard works without an upload."""
         return _run_job(cfg, store, metrics, engine, demo_audio(), "Demo meeting")
 
     @app.get("/v1/jobs", response_model=list[JobSummary], dependencies=[auth])
     async def list_jobs() -> list[dict[str, Any]]:
+        """Finished jobs, newest first."""
         return [job.summary() for job in sorted(store.jobs.values(), key=lambda j: j.created_at, reverse=True)]
 
     @app.get("/v1/jobs/{job_id}", response_model=JobOut, dependencies=[auth])
     async def get_job(job_id: str) -> dict[str, Any]:
+        """Full analysis of one job."""
         return store.get(job_id).payload
 
     @app.get("/v1/jobs/{job_id}/audio", dependencies=[auth])
     async def get_audio(job_id: str) -> Response:
+        """The job's audio as 16 kHz mono WAV for the player."""
         return Response(store.get(job_id).audio_path.read_bytes(), media_type="audio/wav")
 
     @app.get("/v1/jobs/{job_id}/transcript", response_class=PlainTextResponse, dependencies=[auth])
     async def get_transcript(
         job_id: str, format: Annotated[str, Query(pattern="^(srt|vtt|txt|json)$")] = "txt"
     ) -> Response:
+        """Transcript as SRT, VTT, plain text or JSON."""
         job = store.get(job_id)
         if format == "json":
             return JSONResponse(job.payload["transcript"])
@@ -244,6 +256,7 @@ def _register_jobs(
 
     @app.get("/v1/jobs/{job_id}/notes", response_class=PlainTextResponse, dependencies=[auth])
     async def get_notes(job_id: str) -> str:
+        """Notes as Markdown."""
         job = store.get(job_id)
         return job.analysis.notes_markdown(job.title)
 
@@ -253,6 +266,7 @@ def _register_jobs(
         q: Annotated[str, Query(min_length=1, max_length=200)],
         k: Annotated[int, Query(ge=1, le=50)] = 5,
     ) -> dict[str, Any]:
+        """BM25 search over the transcript's sentences."""
         hits = store.get(job_id).analysis.search_index().search(q, k)
         return {"query": q, "hits": [asdict(hit) for hit in hits]}
 

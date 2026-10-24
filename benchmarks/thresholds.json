@@ -1,20 +1,20 @@
 {
-  "_comment": "Quality gate for `python -m echo.bench --check`. Keys are dotted paths into results.json; one section per ASR backend name. Values were set below the measured results of the first full run (see REPORT.md) with headroom for CI runner variance; they hold for both the quick and the full profile.",
+  "_comment": "Quality gate for `python -m echo.bench --check`. Keys are dotted paths into results.json; one section per ASR backend name. Values sit below the first full run (REPORT.md, commit 0910be1: voice WER 2.8%, CER 1.0%, VAD F1 0.979, white 10 dB WER 7.4%, meeting purity 0.989, action F1 0.965, search MRR 0.833, pipeline RTF 0.042) with headroom for the 7-recording quick profile and slower CI runners.",
   "faster-whisper": {
-    "groups.voice_axis.overall.wer": {"max": 0.10},
-    "groups.voice_axis.overall.cer": {"max": 0.05},
-    "groups.voice_axis.overall.vad_f1": {"min": 0.93},
-    "groups.condition_axis.white_10db.wer": {"max": 0.25},
-    "groups.meetings.overall.purity": {"min": 0.85},
-    "groups.meetings.overall.action_f1": {"min": 0.60},
+    "groups.voice_axis.overall.wer": {"max": 0.06},
+    "groups.voice_axis.overall.cer": {"max": 0.03},
+    "groups.voice_axis.overall.vad_f1": {"min": 0.95},
+    "groups.condition_axis.white_10db.wer": {"max": 0.15},
+    "groups.meetings.overall.purity": {"min": 0.90},
+    "groups.meetings.overall.action_f1": {"min": 0.80},
     "groups.meetings.overall.search_mrr": {"min": 0.60},
-    "groups.overall.pipeline_rtf": {"max": 0.60}
+    "groups.overall.pipeline_rtf": {"max": 0.30}
   },
   "mock": {
     "groups.overall.wer": {"max": 0.0},
-    "groups.overall.vad_f1": {"min": 0.93},
-    "groups.meetings.overall.purity": {"min": 0.85},
-    "groups.meetings.overall.action_f1": {"min": 0.60},
+    "groups.overall.vad_f1": {"min": 0.95},
+    "groups.meetings.overall.purity": {"min": 0.90},
+    "groups.meetings.overall.action_f1": {"min": 0.80},
     "groups.meetings.overall.search_mrr": {"min": 0.60},
     "groups.overall.pipeline_rtf": {"max": 0.10}
   }
