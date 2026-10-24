@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>echo dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <span class="logo">echo</span>
+    <span class="tagline">speech intelligence for lectures and meetings</span>
+  </div>
+  <div class="status" id="health">connecting</div>
+</header>
+
+<main class="layout">
+  <aside class="side">
+    <section class="card">
+      <h2>Analyse a recording</h2>
+      <form id="upload-form">
+        <label class="field">
+          <span>WAV file (PCM, any sample rate)</span>
+          <input type="file" id="file" name="file" accept=".wav,audio/wav" required>
+        </label>
+        <label class="field">
+          <span>Title</span>
+          <input type="text" id="title" name="title" placeholder="Lecture 3: photosynthesis">
+        </label>
+        <div class="row">
+          <button type="submit" class="primary" id="analyse-btn">Analyse</button>
+          <button type="button" id="demo-btn">Run demo meeting</button>
+        </div>
+        <label class="field" id="key-field" hidden>
+          <span>API key</span>
+          <input type="password" id="api-key" placeholder="X-API-Key">
+        </label>
+      </form>
+      <p class="hint" id="progress"></p>
+    </section>
+    <section class="card">
+      <h2>Jobs</h2>
+      <ul class="jobs" id="jobs"></ul>
+    </section>
+  </aside>
+
+  <section class="content" id="content" hidden>
+    <div class="card player-card">
+      <div class="job-head">
+        <h2 id="job-title"></h2>
+        <div class="meta" id="job-meta"></div>
+      </div>
+      <audio id="player" controls preload="auto"></audio>
+      <div class="timeline" id="timeline" title="Click to seek"></div>
+      <div class="legend" id="legend"></div>
+      <div class="downloads">
+        <a id="dl-srt" download>SRT</a>
+        <a id="dl-vtt" download>VTT</a>
+        <a id="dl-txt" download>Text</a>
+        <a id="dl-notes" download>Notes (Markdown)</a>
+        <a id="dl-json" download>JSON</a>
+      </div>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="transcript">Transcript</button>
+      <button class="tab" data-tab="notes">Notes</button>
+      <button class="tab" data-tab="actions">Action items</button>
+      <button class="tab" data-tab="search">Search</button>
+    </div>
+
+    <section class="panel card" id="panel-transcript">
+      <div class="transcript" id="transcript"></div>
+    </section>
+    <section class="panel card" id="panel-notes" hidden>
+      <div id="notes"></div>
+    </section>
+    <section class="panel card" id="panel-actions" hidden>
+      <table class="actions" id="actions">
+        <thead><tr><th>Time</th><th>Owner</th><th>Due</th><th>Item</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+    <section class="panel card" id="panel-search" hidden>
+      <form id="search-form" class="row">
+        <input type="search" id="query" placeholder="Search this recording" required>
+        <button type="submit" class="primary">Search</button>
+      </form>
+      <ol class="hits" id="hits"></ol>
+    </section>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>
