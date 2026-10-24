@@ -1,0 +1,61 @@
+[project]
+name = "echo"
+version = "0.1.0"
+description = "Speech intelligence for lectures and meetings: measured ASR, VAD, speaker change detection, notes, action items and search, all offline on CPU."
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+authors = [{ name = "Raunit Kumar Thakur" }]
+dependencies = [
+    "fastapi>=0.162.0",
+    "faster-whisper>=1.2.1",
+    "numpy>=2.5.4",
+    "prometheus-client>=0.24.1",
+    "pydantic>=2.12.5",
+    "python-multipart>=0.0.22",
+    "scipy>=1.18.1",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.50"]
+
+[project.scripts]
+echo = "echo.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "hypothesis>=6.150.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.17.2",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ANN", "N", "W", "RUF", "C90"]
+ignore = ["ANN401", "SIM905"]
+
+[tool.ruff.lint.mccabe]
+max-complexity = 12
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN", "S101"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -p no:cacheprovider"
+filterwarnings = ["ignore::DeprecationWarning"]
+markers = ["whisper: needs the faster-whisper model cached locally", "slow: takes more than a few seconds"]
+
+[tool.coverage.run]
+source = ["echo"]
