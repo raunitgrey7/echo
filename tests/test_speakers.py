@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import numpy as np
-from tests.conftest import harmonic_voice
 
 from echo.audio.io import Audio
 from echo.diarization.change import (
@@ -18,6 +17,7 @@ from echo.diarization.change import (
 )
 from echo.metrics.diarization import LabelledSpan, purity, score_changes
 from echo.vad.energy import SpeechRegion, detect_speech
+from tests.conftest import harmonic_voice
 
 
 def test_symmetric_kl_is_zero_for_identical_and_grows_with_shift():

@@ -6,7 +6,6 @@ import numpy as np
 import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
-from tests.conftest import speech_like
 
 from echo.audio.degrade import (
     CLEAN,
@@ -21,6 +20,7 @@ from echo.audio.degrade import (
     synthetic_rir,
     white_noise,
 )
+from tests.conftest import speech_like
 
 
 def achieved_snr_db(speech: np.ndarray, mixed: np.ndarray) -> float:

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import numpy as np
 import pytest
-from tests.conftest import harmonic_voice, speech_like
 
 from echo.audio.features import frame_signal, frame_times, next_pow2, power_spectrum
 from echo.audio.io import Audio
@@ -22,6 +21,7 @@ from echo.vad.energy import (
     regions_to_mask,
     speech_ratio,
 )
+from tests.conftest import harmonic_voice, speech_like
 
 
 def test_frame_signal_shapes_and_padding():
