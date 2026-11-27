@@ -1,6 +1,6 @@
 # REPORT: what was built, every measured number, and what is still missing
 
-Project: `echo`, speech intelligence for lectures and meetings. Built for the Forge charter on an
+Project: `echo`, speech intelligence for lectures and meetings. Built on an
 Apple Silicon Mac (15 cores, 24 GB), Python 3.13.17 via uv, no GPU, no network at runtime.
 
 ## 1. What was built

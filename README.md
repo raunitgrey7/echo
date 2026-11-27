@@ -1,5 +1,8 @@
 # echo
 
+[![ci](https://github.com/raunitgrey7/echo/actions/workflows/ci.yml/badge.svg)](https://github.com/raunitgrey7/echo/actions/workflows/ci.yml)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Speech intelligence for lectures and meetings, running entirely on a laptop CPU. Give it a
 recording and it returns a timestamped transcript with speaker turns, a keyword timeline,
 extractive notes, action items with owners and deadlines, and a search index that jumps to the
