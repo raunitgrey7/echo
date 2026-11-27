@@ -214,8 +214,9 @@ docker exec echo-smoke id        -> uid=999(echo) gid=999(echo) groups=999(echo)
 7. The service processes whole files synchronously and the HTTP request waits for the result: at the
    measured 2.53 s per audio minute (four threads) a one-hour lecture would take about 2.5 minutes.
    No streaming, English only.
-8. CI could not be executed from this machine (no pushes are allowed); the workflow was written to
-   mirror the local `make lint`, `make test` and `make bench-quick` commands that were run here.
+8. The numbers in this report come from the local full run. CI on GitHub Actions runs lint and the
+   tests on Linux and macOS and the quick benchmark gate on macOS on every push, mirroring the local
+   `make lint`, `make test` and `make bench-quick` commands.
 9. The Docker image builds the Linux arm64 wheels of ctranslate2 and onnxruntime; it was built
    locally (see section 4) but not run against the whisper weights inside the container.
 10. No LLM enhancement was added; the roadmap keeps it optional and behind a flag.
